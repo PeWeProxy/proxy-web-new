@@ -29,15 +29,15 @@
                 <%= link_to image_tag("/images/proxyLogo.png"), :root, :id => :proxyLogo %>
                 <div id="headerMenu">
                     <ul>
-                        <li class="firstItem selected"><%= link_to "PeweProxy", :root %></li>
-                        <li><%= link_to "O projekte", {:controller => :index, :action => :about} %></li>
-                        <li><%= link_to "Súkromie", :controller => :index, :action => :privacy %></li>
-                        <li><%= link_to "Časté otázky", :controller => :index, :action => :faq %></li>
-                        <li><%= link_to "Chcem pomôcť", :controller => :index, :action => :contribute %></li>
+                        <li class="firstItem<% if request.path_parameters[:action] == 'intro' %> selected<% end %>"><%= link_to "PeweProxy", :root %></li>
+                        <li<% if request.path_parameters[:action] == 'about' %> class="selected"<% end %>><%= link_to "O projekte", {:controller => :index, :action => :about} %></li>
+                        <li<% if request.path_parameters[:action] == 'privacy' %> class="selected"<% end %>><%= link_to "Súkromie", :controller => :index, :action => :privacy %></li>
+                        <li<% if request.path_parameters[:action] == 'faq' %> class="selected"<% end %>><%= link_to "Časté otázky", :controller => :index, :action => :faq %></li>
+                        <li<% if request.path_parameters[:action] == 'contribute' %> class="selected"<% end %>><%= link_to "Chcem pomôcť", :controller => :index, :action => :contribute %></li>
                     </ul>
 					<% if @uid %>
 					<ul class="userMenu">
-						<li><%= link_to "Vaše konto", :controller => :user_options, :action => :logs %></li>
+						<li<% if request.path_parameters[:controller] == 'user_options' %> class="selected"<% end %>><%= link_to "Vaše konto", :controller => :user_options, :action => :logs %></li>
 					</ul>
 					<% end %>
                 </div>
