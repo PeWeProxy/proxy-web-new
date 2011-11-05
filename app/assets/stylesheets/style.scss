@@ -1,0 +1,522 @@
+$textColor: #1d1d1d;
+
+body, p, div, ul, li, img {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
+
+    a {
+        color: #151515;
+        text-decoration: underline;
+        &:hover {
+            color: #151515;
+            text-decoration: none;
+        }
+    }
+
+    li {
+        list-style: none;
+    }
+}
+
+.floatCleaner {
+    clear: both;
+}
+
+.pageBackground {
+    background-color: #f7f7f7;
+    background-image: url("../images/pageBackgroundTop.png");
+    background-position: top;
+    background-repeat: repeat-x;
+    
+    .pageWrapper {
+        background-image: url("../images/pageBackgroundBottom.png");
+        background-position: bottom;
+        background-repeat: repeat-x;
+    }
+}
+
+#page {
+    color: #151515;
+    margin: auto;
+    width: 990px;
+    background-image: url("../images/bodyBackground.png");
+    background-position: center;
+    background-repeat: repeat-y;
+
+    padding: {
+        left: 6px;
+        right: 6px;
+    }
+    a.useProxyButton {
+        background-image: url("../images/buttonGreenTop.png");
+        text-decoration: none;
+        width: 368px;
+        height: 60px;
+        font-size: 20px;
+        color: #003300;
+        display: block;
+        
+        .textWrapper {
+            display: block;
+            padding-left: 78px;
+            padding-top: 19px;
+        }
+    }
+    #header {
+        height: 169px;
+        
+        background: {
+            color: #fcfcfc;
+            image: url("../images/headerBackground.png");
+            repeat: no-repeat;
+        }
+
+        .headerProxyButton {
+            float: right;
+
+            margin: {
+                top: 32px;
+                right: 42px;
+            }
+        }
+        a#proxyLogo {
+            display: block;
+            height: 123px;
+            width: 329px;
+
+            img {
+                margin: {
+                    top: 32px;
+                    left: 29px
+                }
+            }
+        }
+        #headerMenu {
+            height: 45px;
+            
+            background: {
+                image: url("../images/menuBackground.png");
+                repeat: repeat-x;
+            }
+
+            ul li {
+                float: left;
+                list-style: none;
+                border-left: 1px solid #a14e25;
+
+                a {
+                    display: block;
+                    height: 33px;
+                    text-decoration: none;
+                    font-size: 16px;
+                    color: $textColor;
+
+                    padding: {
+                        left: 20px;
+                        right: 20px;
+                        top: 12px;
+                    }
+
+                    &:hover {
+                        background: {
+                            image: url("../images/menuItemSelected.png");
+                            repeat: repeat-x;
+                        }
+                    }
+                }
+
+                &.selected {
+                    background: {
+                        image: url("../images/menuItemSelected.png");
+                        repeat: repeat-x;
+                    }
+                }
+
+                &.firstItem {
+                    border-left: 0 solid transparent;
+                }
+            }
+        }
+    }
+
+    h1 {
+        font-weight: normal;
+        font-size: 26px;
+
+        margin: {
+            left: 21px;
+            right: 21px;
+            bottom: 9px;
+            top: 14px;
+        }
+    }
+
+    .pageBody {
+        font-size: 15px;
+        padding: {
+            left: 22px;
+            right: 22px;
+            bottom: 34px;
+        }
+
+        #carousel {
+            height: 275px;
+            margin: 0 auto;
+            overflow: hidden;
+            background-image: url("../images/carouselBackground.png");
+            border: 1px solid #919191;
+
+            #slides {
+                overflow: hidden;
+                position: relative;
+                width: 946px;
+                height: 275px;
+
+                ul.slideList {
+                    position:relative;
+                    left:0;
+                    top:0;
+                    list-style:none;
+                    margin:0;
+                    padding:0;
+                    width: 2838px;
+
+                    li.slide {
+                        width: 946px;
+                        height: 275px;
+                        float:left;
+
+                        .slideInnerBox {
+                            margin: {
+                                left: 36px;
+                                top: 6px;
+                                right: 36px;
+                                bottom: 6px;
+                            }
+                        }
+
+                        #socialProxy {
+                            .textContent {
+                                float: right;
+                                width: 415px;
+                                padding-top: 27px;
+
+                                h2 {
+                                    font-size: 29px;
+
+                                    span {
+                                        color: #a5390e;
+                                        font-size: 31px;
+                                    }
+                                }
+                                li {
+                                    margin-left: 35px;
+                                    margin-top: 6px;
+                                    list-style: disc;
+                                }
+                                a.moreAbout {
+                                    font-size: 15px;
+                                    text-decoration: none;
+                                    float: right;
+                                    margin-right: 40px;
+                                    margin-top: 20px;
+
+                                    span {
+                                        border: 1px solid #9f6d49;
+                                        background-image: url("../images/carouselButtonBackground.png");
+                                        
+                                        padding: {
+                                            top: 4px;
+                                            bottom: 4px;
+                                            left: 18px;
+                                            right: 18px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #prev {
+                position: relative;
+                top: -158px;
+                margin-left: 5px;
+            }
+            #next {
+                position: relative;
+                top: -158px;
+                margin-right: 5px;
+                float: right;
+            }
+        }
+
+
+        .carouselCounter {
+            margin-top: 10px;
+            
+            ul {
+                display: table;
+                margin: auto;
+                li {
+                    margin-left: 8px;
+                    float: left;
+                    list-style: none;
+
+                    a {
+                        display: block;
+                        float: left;
+                        width: 10px;
+                        height: 10px;
+
+                        background: {
+                            image: url("../images/carouselCounterPoints.png");
+                            position: top;
+                            repeat: no-repeat;
+                        }
+
+                        &:hover, &.active {
+                            background-position: bottom;
+                        }
+                    }
+                }
+            }
+        }
+
+        h2 {
+            margin: 0;
+
+            font: {
+                size: 26px;
+                weight: normal;
+            }
+        }
+
+        /* start --- Proxy index --- */
+        .middleBox {
+            padding: {
+                left: 17px;
+                right: 17px;
+                top: 16px;
+            }
+
+            h3 {
+                padding: 0;
+                margin: 0;
+            }
+            
+            &.aboutProxy {
+                margin-top: 18px;
+                padding-bottom: 12px;
+                background-color: #f5f5f5;
+
+               
+                .fastProxy {
+                    margin-top: 14px;
+                    border: 1px solid #d2d2d2;
+
+                    padding: {
+                        left: 16px;
+                        right: 200px;
+                        top: 16px;
+                        bottom: 18px;
+                    }
+                    background: {
+                        color: #ffffff;
+                        image: url("../images/speedMeter.png");
+                        repeat: no-repeat;
+                        position: 771px center;
+                    }
+
+                    li {
+                        margin-top: 5px;
+                        list-style: disc;
+                        margin-left: 16px;
+                    }
+                }
+                
+                .halfSizeBlock {
+                    width: 448px;
+                    border: 1px solid #d2d2d2;
+                    margin-top: 12px;
+
+                    div {
+                        padding: {
+                            left: 16px;
+                            top: 16px;
+                            bottom: 16px;
+                            right: 16px;
+                        }
+                    }
+                    p {
+                        margin: {
+                            top: 5px;
+                            bottom: 7px;
+                        }
+                    }
+                }
+                .contentBlockRight {
+                    float: right;
+
+                    &.openProxy {
+                        height: 192px;
+                        
+                        background: {
+                            color: #ffffff;
+                            image: url("../images/worldOpen.png");
+                            repeat: no-repeat;
+                            position: 309px bottom;
+                        }
+
+                        li {
+                            list-style: disc;
+                            margin: {
+                                left: 16px;
+                                top: 5px;
+                                right: 140px;
+                            }
+                        }
+                    }
+                    &.easyProxy {
+                        height: 201px;
+
+                        background: {
+                            color: #ffffff;
+                            image: url("../images/easyToUseHand.png");
+                            repeat: no-repeat;
+                            position: 97% 100%;
+                        }
+
+                        p.shortBlock {
+                            margin: {
+                                right: 120px;
+                                bottom: 42px;
+                            }
+                        }
+                    }
+                }
+                .contentBlockLeft {
+                    float: left;
+
+                    &.compatibleProxy {
+                        height: 192px;
+                        background-color: #ffffff;
+                        
+                        li {
+                            float: left;
+                            margin-left: 22px;
+                            margin-top: 10px;
+                            padding: 0px;
+                            height: 65px;
+
+
+                            &.firstItem {
+                                margin-left: 3px;
+                            }
+                        }
+                    }
+                    &.distributedProxy {
+                        height: 201px;
+
+                        background: {
+                            color: #ffffff;
+                            image: url("../images/distributedProxy.png");
+                            repeat: no-repeat;
+                            position: 0% 70%;
+                        }
+                        p {
+                            margin: {
+                                left: 128px;
+                                top: 8px !important;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+        h2 {
+            margin: {
+                top: 20px;
+                bottom: 15px;
+            }
+        }
+        #proxySchemaBox {
+            border: 1px solid #979797;
+            background-color: #f5f5f5;
+        }
+        h2#finalMoto {
+            margin-top: 35px;
+            text-align: center;
+
+            font: {
+                weight: bold;
+                size: 22px;
+            }
+
+            span {
+                color: #f37c2c;
+            }
+        }
+        .bottomProxyButton {
+            margin: auto;
+            width: 370px;
+            margin-top: 20px;
+        }
+        /* end   --- Proxy index --- */
+
+
+
+        /* start --- Proxy Setup --- */
+        #proxySetup {
+            border: 1px solid red;
+        }
+        /* end   --- Proxy Setup --- */
+    }
+}
+#footer {
+    width: 1002px;
+    height: 100px;
+    font-size: 11px;
+    margin: auto;
+    color: #913f08;
+
+    background: {
+        image: url("../images/footerBackground.png");
+        repeat: no-repeat;
+        position: top, center;
+    }
+
+    .fiitAddress {
+        line-height: 16px;
+        padding-top: 10px;
+        
+        img {
+            float: left;
+            
+            margin: {
+                left: 80px;
+                right: 30px;
+            }
+        }
+        p {
+            margin-top: 7px;
+        }
+    }
+    .copyright {
+        float: right;
+        text-align: right;
+
+        margin: {
+            right: 80px;
+            top: 17px;
+        }
+    }
+}
+
+
+
+
+
