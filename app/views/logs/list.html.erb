@@ -8,7 +8,7 @@
   // ]]>
 </script>
 
-<%unless @logs.empty?%>
+<%unless @logs.nil? || @logs.empty?%>
 
   <%= form_tag({ :action => "delete_many"}, {:name => "delete_many_form"}) do %>
     <table id="logs" border="1">

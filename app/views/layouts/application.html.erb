@@ -13,7 +13,7 @@
         <div id="page">
             <div id="header">
                 <div class="headerProxyButton">
-					<% if @uid and false %>
+					<% if @uid %>
 					.. používam proxy, som happy ..
 					<% else %>
 					<script type="text/javascript">
@@ -35,6 +35,11 @@
                         <li><%= link_to "Časté otázky", :controller => :index, :action => :faq %></li>
                         <li><%= link_to "Chcem pomôcť", :controller => :index, :action => :contribute %></li>
                     </ul>
+					<% if @uid %>
+					<ul class="userMenu">
+						<li><%= link_to "Vaše konto", :controller => :user_options, :action => :logs %></li>
+					</ul>
+					<% end %>
                 </div>
             </div>
 
