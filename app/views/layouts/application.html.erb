@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>ProxyWeb</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag    "style" %>
+  <%= javascript_include_tag "carouselControler" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -15,7 +15,7 @@
                 <div class="headerProxyButton">
                     <a class="useProxyButton" href="#"><span class="textWrapper">Chcem používať PeWe Proxy</span></a>
                 </div>
-                <a id="proxyLogo" href="#"><img src="./images/proxyLogo.png" title="" alt="Proxy logo" /></a>
+                <%= link_to image_tag("/images/proxyLogo.png"), :root, :id => :proxyLogo %>
                 <div id="headerMenu">
                     <ul>
                         <li class="firstItem selected"><%= link_to "PeweProxy", :root %></li>
@@ -42,7 +42,7 @@
                 web by team 13
             </div>
             <div class="fiitAddress">
-                <img src="./images/fiitLogoOrange.png" alt="" title="" />
+                <%= image_tag("/images/fiitLogoOrange.png") %>
                 <div>
                     <p class="address">
                         projekt je vyvíjaný pod záštitou FIIT STU <br />
