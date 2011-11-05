@@ -15,7 +15,7 @@
                 <div class="headerProxyButton">
                     <a class="useProxyButton" href="#"><span class="textWrapper">Chcem používať PeWe Proxy</span></a>
                 </div>
-                <a id="proxyLogo" href="#"><img src="./images/proxyLogo.png" title="" alt="Proxy logo" /></a>
+                <a id="proxyLogo" href="#"><%= image_tag("/images/proxyLogo.png") %></a>
                 <div id="headerMenu">
                     <ul>
                         <li class="firstItem selected"><%= link_to "PeweProxy", :root %></li>
@@ -42,7 +42,7 @@
                 web by team 13
             </div>
             <div class="fiitAddress">
-                <img src="./images/fiitLogoOrange.png" alt="" title="" />
+                <%= image_tag("/images/fiitLogoOrange.png") %>
                 <div>
                     <p class="address">
                         projekt je vyvíjaný pod záštitou FIIT STU <br />
