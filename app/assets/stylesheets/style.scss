@@ -142,6 +142,9 @@ body, p, div, ul, li, img {
                     border-left: 0 solid transparent;
                 }
             }
+            ul.userMenu {
+                float: right;
+            }
         }
     }
 
@@ -478,6 +481,71 @@ body, p, div, ul, li, img {
             border: 1px solid red;
         }
         /* end   --- Proxy Setup --- */
+
+
+        
+        /* start --- Proxy Logs --- */
+        table {
+            width: 692px;
+            border-collapse: collapse;
+            border-color: #a3a3a3;
+
+            thead {
+                background-color: #fec59e;
+                
+                th {
+                    font-size: 14px;
+                    padding-top: 4px;
+                    padding-bottom: 3px;
+                    padding-left: 10px;
+                    text-align: left;
+
+                    &.timestamp {
+                        width: 100px;
+                    }
+                    &.delete {
+                        padding-left: 0;
+                        text-align: center;
+                    }
+                }
+            }
+            tbody {
+                color: #652901;
+                font-size: 14px;
+
+                a {
+                    color: #652901;
+                    text-decoration: none;
+                }
+                a:hover {
+                    text-decoration: underline;
+                }
+                td {
+                    padding: {
+                        top: 3px;
+                        bottom: 2px;
+                        left: 10px;
+                    }
+
+                    &.delete {
+                        padding-left: 0;
+                        width: 26px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        #more {
+            a {
+                color: #652901;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        /* end   --- Proxy Logs --- */
     }
 }
 #footer {
