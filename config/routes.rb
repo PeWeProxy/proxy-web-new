@@ -58,4 +58,7 @@ ProxyWeb::Application.routes.draw do
 	
 	root :to => "index#intro"
 	
+	match ':controller(/:action(/:id(.:format)))'
+	match ':controller(/:action(/:id))'
+	
 end
