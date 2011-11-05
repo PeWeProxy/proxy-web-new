@@ -37,7 +37,7 @@
                     </ul>
 					<% if @uid %>
 					<ul class="userMenu">
-						<li<% if request.path_parameters[:controller] == 'user_options' %> class="selected"<% end %>><%= link_to "Vaše konto", :controller => :user_options, :action => :logs %></li>
+						<li<% if request.path_parameters[:controller] == 'user_options' %> class="selected"<% end %>><%= link_to "Vaše konto", :controller => :logs, :action => :list %></li>
 					</ul>
 					<% end %>
                 </div>

@@ -1,0 +1,6 @@
+<ul>
+  <li><%= link_to "Záznamy o Vašej aktivite", :controller => :logs, :action => :list %></li>
+  <li><%= link_to "Nahlástiť nefunkčný web", :controller => :broken_page_reporter, :action => :report  %></li>
+  <li><%= link_to "Používať na inom prehliadači", :controller => :move_uid, :action => :move  %></li>
+  <li><%= link_to "Odstrániť z tohto počítača", :controller => :remove_uid, :action => :remove  %></li>
+</ul>
