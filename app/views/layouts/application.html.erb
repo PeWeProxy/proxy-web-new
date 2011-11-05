@@ -21,7 +21,7 @@
 					  var ec = new evercookie();
 					  // ]]>
 					</script>
-					<a class="useProxyButton" href="#" onclick="ec.set('__peweproxy_uid','<%=@uid_new%>'); location.href='<%=url_for(:controller => :user_options, :action => :proxy_setup)%>'; return false">
+					<a class="useProxyButton" href="#" onclick="ec.set('__peweproxy_uid','<%=@uid_new%>'); location.href='<%=url_for(:controller => :index, :action => :browsers_setup)%>'; return false">
 					  <span class="textWrapper">Chcem používať PeWe Proxy</span>
 					</a>
 					<% end %>
@@ -37,7 +37,12 @@
                     </ul>
 					<% if @uid %>
 					<ul class="userMenu">
-						<li<% if request.path_parameters[:controller] == 'user_options' %> class="selected"<% end %>><%= link_to "Vaše konto", :controller => :logs, :action => :list %></li>
+						<li<% if 
+							  request.path_parameters[:controller] == 'logs' or
+							  request.path_parameters[:controller] == 'broken_page_reporter' or
+							  request.path_parameters[:controller] == 'move_uid' or
+							  request.path_parameters[:controller] == 'remove_uid'
+						  %> class="selected"<% end %>><%= link_to "Vaše konto", :controller => :logs, :action => :list %></li>
 					</ul>
 					<% end %>
                 </div>

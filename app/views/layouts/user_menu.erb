@@ -1,6 +1,14 @@
 <ul>
-  <li><%= link_to "Záznamy o Vašej aktivite", :controller => :logs, :action => :list %></li>
-  <li><%= link_to "Nahlástiť nefunkčný web", :controller => :broken_page_reporter, :action => :report  %></li>
-  <li><%= link_to "Používať na inom prehliadači", :controller => :move_uid, :action => :move  %></li>
-  <li><%= link_to "Odstrániť z tohto počítača", :controller => :remove_uid, :action => :remove  %></li>
+  <li<% if request.path_parameters[:action] == 'list' %> class="selected"<% end %>>
+	<%= link_to "Záznamy o Vašej aktivite", :controller => :logs, :action => :list %>
+  </li>
+  <li<% if request.path_parameters[:action] == 'report' %> class="selected"<% end %>>
+	<%= link_to "Nahlástiť nefunkčný web", :controller => :broken_page_reporter, :action => :report  %>
+  </li>
+  <li<% if request.path_parameters[:action] == 'move' %> class="selected"<% end %>>
+	<%= link_to "Používať na inom prehliadači", :controller => :move_uid, :action => :move  %>
+  </li>
+  <li<% if request.path_parameters[:action] == 'remove' %> class="selected"<% end %>>
+	<%= link_to "Odstrániť z tohto počítača", :controller => :remove_uid, :action => :remove  %>
+  </li>
 </ul>
