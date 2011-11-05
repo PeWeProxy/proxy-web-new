@@ -1,0 +1,316 @@
+body, p, div, ul, li, img {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif; }
+  body a, p a, div a, ul a, li a, img a {
+    color: #151515;
+    text-decoration: underline; }
+    body a:hover, p a:hover, div a:hover, ul a:hover, li a:hover, img a:hover {
+      color: #151515;
+      text-decoration: none; }
+  body li, p li, div li, ul li, li li, img li {
+    list-style: none; }
+
+.floatCleaner {
+  clear: both; }
+
+.pageBackground {
+  background-color: #f7f7f7;
+  background-image: url("../Images/pageBackgroundTop.png");
+  background-position: top;
+  background-repeat: repeat-x; }
+  .pageBackground .pageWrapper {
+    background-image: url("../Images/pageBackgroundBottom.png");
+    background-position: bottom;
+    background-repeat: repeat-x; }
+
+#page {
+  color: #151515;
+  margin: auto;
+  width: 990px;
+  background-image: url("../Images/bodyBackground.png");
+  background-position: center;
+  background-repeat: repeat-y;
+  padding-left: 6px;
+  padding-right: 6px; }
+  #page a.useProxyButton {
+    background-image: url("../Images/buttonGreenTop.png");
+    text-decoration: none;
+    width: 368px;
+    height: 60px;
+    font-size: 20px;
+    color: #003300;
+    display: block; }
+    #page a.useProxyButton .textWrapper {
+      display: block;
+      padding-left: 78px;
+      padding-top: 19px; }
+  #page #header {
+    height: 169px;
+    background-color: #fcfcfc;
+    background-image: url("../Images/headerBackground.png");
+    background-repeat: no-repeat; }
+    #page #header .headerProxyButton {
+      float: right;
+      margin-top: 32px;
+      margin-right: 42px; }
+    #page #header a#proxyLogo {
+      display: block;
+      height: 123px;
+      width: 329px; }
+      #page #header a#proxyLogo img {
+        margin-top: 32px;
+        margin-left: 29px; }
+    #page #header #headerMenu {
+      height: 45px;
+      background-image: url("../Images/menuBackground.png");
+      background-repeat: repeat-x; }
+      #page #header #headerMenu ul li {
+        float: left;
+        list-style: none;
+        border-left: 1px solid #a14e25; }
+        #page #header #headerMenu ul li a {
+          display: block;
+          height: 33px;
+          text-decoration: none;
+          font-size: 16px;
+          color: #1d1d1d;
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-top: 12px; }
+          #page #header #headerMenu ul li a:hover {
+            background-image: url("../Images/menuItemSelected.png");
+            background-repeat: repeat-x; }
+        #page #header #headerMenu ul li.selected {
+          background-image: url("../Images/menuItemSelected.png");
+          background-repeat: repeat-x; }
+        #page #header #headerMenu ul li.firstItem {
+          border-left: 0 solid transparent; }
+  #page h1 {
+    font-weight: normal;
+    font-size: 26px;
+    margin-left: 21px;
+    margin-right: 21px;
+    margin-bottom: 9px;
+    margin-top: 14px; }
+  #page .pageBody {
+    font-size: 15px;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-bottom: 34px;
+    /* start --- Proxy index --- */
+    /* end   --- Proxy index --- */
+    /* start --- Proxy Setup --- */
+    /* end   --- Proxy Setup --- */ }
+    #page .pageBody #carousel {
+      height: 275px;
+      margin: 0 auto;
+      overflow: hidden;
+      background-image: url("../Images/carouselBackground.png");
+      border: 1px solid #919191; }
+      #page .pageBody #carousel #slides {
+        overflow: hidden;
+        position: relative;
+        width: 946px;
+        height: 275px; }
+        #page .pageBody #carousel #slides ul.slideList {
+          position: relative;
+          left: 0;
+          top: 0;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          width: 2838px; }
+          #page .pageBody #carousel #slides ul.slideList li.slide {
+            width: 946px;
+            height: 275px;
+            float: left; }
+            #page .pageBody #carousel #slides ul.slideList li.slide .slideInnerBox {
+              margin-left: 36px;
+              margin-top: 6px;
+              margin-right: 36px;
+              margin-bottom: 6px; }
+            #page .pageBody #carousel #slides ul.slideList li.slide #socialProxy .textContent {
+              float: right;
+              width: 415px;
+              padding-top: 27px; }
+              #page .pageBody #carousel #slides ul.slideList li.slide #socialProxy .textContent h2 {
+                font-size: 29px; }
+                #page .pageBody #carousel #slides ul.slideList li.slide #socialProxy .textContent h2 span {
+                  color: #a5390e;
+                  font-size: 31px; }
+              #page .pageBody #carousel #slides ul.slideList li.slide #socialProxy .textContent li {
+                margin-left: 35px;
+                margin-top: 6px;
+                list-style: disc; }
+              #page .pageBody #carousel #slides ul.slideList li.slide #socialProxy .textContent a.moreAbout {
+                font-size: 15px;
+                text-decoration: none;
+                float: right;
+                margin-right: 40px;
+                margin-top: 20px; }
+                #page .pageBody #carousel #slides ul.slideList li.slide #socialProxy .textContent a.moreAbout span {
+                  border: 1px solid #9f6d49;
+                  background-image: url("../Images/carouselButtonBackground.png");
+                  padding-top: 4px;
+                  padding-bottom: 4px;
+                  padding-left: 18px;
+                  padding-right: 18px; }
+      #page .pageBody #carousel #prev {
+        position: relative;
+        top: -158px;
+        margin-left: 5px; }
+      #page .pageBody #carousel #next {
+        position: relative;
+        top: -158px;
+        margin-right: 5px;
+        float: right; }
+    #page .pageBody .carouselCounter {
+      margin-top: 10px; }
+      #page .pageBody .carouselCounter ul {
+        display: table;
+        margin: auto; }
+        #page .pageBody .carouselCounter ul li {
+          margin-left: 8px;
+          float: left;
+          list-style: none; }
+          #page .pageBody .carouselCounter ul li a {
+            display: block;
+            float: left;
+            width: 10px;
+            height: 10px;
+            background-image: url("../Images/carouselCounterPoints.png");
+            background-position: top;
+            background-repeat: no-repeat; }
+            #page .pageBody .carouselCounter ul li a:hover, #page .pageBody .carouselCounter ul li a.active {
+              background-position: bottom; }
+    #page .pageBody h2 {
+      margin: 0;
+      font-size: 26px;
+      font-weight: normal; }
+    #page .pageBody .middleBox {
+      padding-left: 17px;
+      padding-right: 17px;
+      padding-top: 16px; }
+      #page .pageBody .middleBox h3 {
+        padding: 0;
+        margin: 0; }
+      #page .pageBody .middleBox.aboutProxy {
+        margin-top: 18px;
+        padding-bottom: 12px;
+        background-color: #f5f5f5; }
+        #page .pageBody .middleBox.aboutProxy .fastProxy {
+          margin-top: 14px;
+          border: 1px solid #d2d2d2;
+          padding-left: 16px;
+          padding-right: 200px;
+          padding-top: 16px;
+          padding-bottom: 18px;
+          background-color: #ffffff;
+          background-image: url("../Images/speedMeter.png");
+          background-repeat: no-repeat;
+          background-position: 771px center; }
+          #page .pageBody .middleBox.aboutProxy .fastProxy li {
+            margin-top: 5px;
+            list-style: disc;
+            margin-left: 16px; }
+        #page .pageBody .middleBox.aboutProxy .halfSizeBlock {
+          width: 448px;
+          border: 1px solid #d2d2d2;
+          margin-top: 12px; }
+          #page .pageBody .middleBox.aboutProxy .halfSizeBlock div {
+            padding-left: 16px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            padding-right: 16px; }
+          #page .pageBody .middleBox.aboutProxy .halfSizeBlock p {
+            margin-top: 5px;
+            margin-bottom: 7px; }
+        #page .pageBody .middleBox.aboutProxy .contentBlockRight {
+          float: right; }
+          #page .pageBody .middleBox.aboutProxy .contentBlockRight.openProxy {
+            height: 192px;
+            background-color: #ffffff;
+            background-image: url("../Images/worldOpen.png");
+            background-repeat: no-repeat;
+            background-position: 309px bottom; }
+            #page .pageBody .middleBox.aboutProxy .contentBlockRight.openProxy li {
+              list-style: disc;
+              margin-left: 16px;
+              margin-top: 5px;
+              margin-right: 140px; }
+          #page .pageBody .middleBox.aboutProxy .contentBlockRight.easyProxy {
+            height: 201px;
+            background-color: #ffffff;
+            background-image: url("../Images/easyToUseHand.png");
+            background-repeat: no-repeat;
+            background-position: 97% 100%; }
+            #page .pageBody .middleBox.aboutProxy .contentBlockRight.easyProxy p.shortBlock {
+              margin-right: 120px;
+              margin-bottom: 42px; }
+        #page .pageBody .middleBox.aboutProxy .contentBlockLeft {
+          float: left; }
+          #page .pageBody .middleBox.aboutProxy .contentBlockLeft.compatibleProxy {
+            height: 192px;
+            background-color: #ffffff; }
+            #page .pageBody .middleBox.aboutProxy .contentBlockLeft.compatibleProxy li {
+              float: left;
+              margin-left: 22px;
+              margin-top: 10px;
+              padding: 0px;
+              height: 65px; }
+              #page .pageBody .middleBox.aboutProxy .contentBlockLeft.compatibleProxy li.firstItem {
+                margin-left: 3px; }
+          #page .pageBody .middleBox.aboutProxy .contentBlockLeft.distributedProxy {
+            height: 201px;
+            background-color: #ffffff;
+            background-image: url("../Images/distributedProxy.png");
+            background-repeat: no-repeat;
+            background-position: 0% 70%; }
+            #page .pageBody .middleBox.aboutProxy .contentBlockLeft.distributedProxy p {
+              margin-left: 128px;
+              margin-top: 8px !important; }
+    #page .pageBody h2 {
+      margin-top: 20px;
+      margin-bottom: 15px; }
+    #page .pageBody #proxySchemaBox {
+      border: 1px solid #979797;
+      background-color: #f5f5f5; }
+    #page .pageBody h2#finalMoto {
+      margin-top: 35px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 22px; }
+      #page .pageBody h2#finalMoto span {
+        color: #f37c2c; }
+    #page .pageBody .bottomProxyButton {
+      margin: auto;
+      width: 370px;
+      margin-top: 20px; }
+    #page .pageBody #proxySetup {
+      border: 1px solid red; }
+
+#footer {
+  width: 1002px;
+  height: 100px;
+  font-size: 11px;
+  margin: auto;
+  color: #913f08;
+  background-image: url("../Images/footerBackground.png");
+  background-repeat: no-repeat;
+  background-position: top, center; }
+  #footer .fiitAddress {
+    line-height: 16px;
+    padding-top: 10px; }
+    #footer .fiitAddress img {
+      float: left;
+      margin-left: 80px;
+      margin-right: 30px; }
+    #footer .fiitAddress p {
+      margin-top: 7px; }
+  #footer .copyright {
+    float: right;
+    text-align: right;
+    margin-right: 80px;
+    margin-top: 17px; }
