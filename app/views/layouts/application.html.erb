@@ -7,8 +7,58 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  
+<div class="pageBackground">
+    <div class="pageWrapper">
+        <div id="page">
+            <div id="header">
+                <div class="headerProxyButton">
+                    <a class="useProxyButton" href="#"><span class="textWrapper">Chcem používať PeWe Proxy</span></a>
+                </div>
+                <a id="proxyLogo" href="#"><img src="./images/proxyLogo.png" title="" alt="Proxy logo" /></a>
+                <div id="headerMenu">
+                    <ul>
+                        <li class="firstItem selected"><%= link_to "PeweProxy", :root %></li>
+                        <li><%= link_to "O projekte", {:controller => :index, :action => :about} %></li>
+                        <li><%= link_to "Súkromie", :controller => :index, :action => :privacy %></li>
+                        <li><%= link_to "Časté otázky", :controller => :index, :action => :faq %></li>
+                        <li><%= link_to "Chcem pomôcť", :controller => :index, :action => :contribute %></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pageBody">
 
 <%= yield %>
+			  
+			</div>
+        </div>
+
+        <div id="footer">
+            <div class="copyright">
+                ©2011<br />
+                <br />
+                webdesign by i<br />
+                web by team 13
+            </div>
+            <div class="fiitAddress">
+                <img src="./images/fiitLogoOrange.png" alt="" title="" />
+                <div>
+                    <p class="address">
+                        projekt je vyvíjaný pod záštitou FIIT STU <br />
+                        Ilkovičova 3, <br />
+                        842 16 Bratislava 4
+                    </p>
+                    <p class="url">
+                        www.fiit.stuba.sk
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
 
 </body>
 </html>
