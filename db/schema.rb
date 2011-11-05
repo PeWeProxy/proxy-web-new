@@ -13,19 +13,19 @@
 
 ActiveRecord::Schema.define(:version => 0) do
 
-  create_table "broken_pages", :force => true do |t|
-    t.string   "url",       :limit => 4000, :null => false
-    t.string   "uid",       :limit => 32,   :null => false
-    t.datetime "timestamp",                 :null => false
-    t.text     "description",								:null => true
-    t.string	 "email",		  :limit => 100,	:null => true
-    t.integer  "status",										:null => false, 	:default => 0
-  end
+  create_table	"broken_pages",	:force => true do |t|
+	t.string	"url",		:limit => 4000,	:null => false
+	t.string	"uid",		:limit => 32,	:null => false
+	t.datetime	"timestamp",				:null => false
+	t.text		"description",				:null => true
+	t.string	"email",	:limit => 100,	:null => true
+	t.integer	"status",					:null => false,	:default => 0
+ end
 
-  create_table "stored_apuids", :force => true do |t|
-    t.string   "identifier"
-    t.string   "uid"
-    t.datetime "valid_until"
+  create_table	"stored_apuids", :force => true do |t|
+	t.string	"identifier"
+	t.string	"uid"
+	t.datetime	"valid_until"
   end
 
 end
