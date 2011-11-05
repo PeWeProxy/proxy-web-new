@@ -13,7 +13,18 @@
         <div id="page">
             <div id="header">
                 <div class="headerProxyButton">
-                    <a class="useProxyButton" href="#"><span class="textWrapper">Chcem používať PeWe Proxy</span></a>
+					<% if @uid and false %>
+					.. používam proxy, som happy ..
+					<% else %>
+					<script type="text/css">
+					  // <![CDATA[
+					  var ec = new evercookie();
+					  // ]]>
+					</script>
+					<a class="useProxyButton" href="#" onclick="ec.set('__peweproxy_uid','<%=@uid_new%>'); return false">
+					  <span class="textWrapper">Chcem používať PeWe Proxy</span>
+					</a>
+					<% end %>
                 </div>
                 <%= link_to image_tag("/images/proxyLogo.png"), :root, :id => :proxyLogo %>
                 <div id="headerMenu">
