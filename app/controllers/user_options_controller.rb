@@ -1,6 +1,6 @@
 class UserOptionsController < ApplicationController
 	
-	def logs
+	def proxy_setup
 	end
 	
 end

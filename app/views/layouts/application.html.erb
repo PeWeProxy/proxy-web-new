@@ -16,12 +16,12 @@
 					<% if @uid and false %>
 					.. používam proxy, som happy ..
 					<% else %>
-					<script type="text/css">
+					<script type="text/javascript">
 					  // <![CDATA[
 					  var ec = new evercookie();
 					  // ]]>
 					</script>
-					<a class="useProxyButton" href="#" onclick="ec.set('__peweproxy_uid','<%=@uid_new%>'); return false">
+					<a class="useProxyButton" href="#" onclick="ec.set('__peweproxy_uid','<%=@uid_new%>'); location.href='<%=url_for(:controller => :user_options, :action => :proxy_setup)%>'; return false">
 					  <span class="textWrapper">Chcem používať PeWe Proxy</span>
 					</a>
 					<% end %>
