@@ -14,7 +14,13 @@
             <div id="header">
                 <div class="headerProxyButton">
 					<% if @uid %>
-					.. používam proxy, som happy ..
+					  <% if request.env['HTTP_VIA'] =~ /AdaptiveProxy/ %>
+						Surfujete cez PeWe Proxy
+					  <% else %>
+						 <a href="<%=url_for(:controller => :index, :action => :browsers_setup)%>">
+							<span class="textWrapper">Dokončiť nastavenie proxy</span>
+						  </a>
+					  <% end  %>
 					<% else %>
 					<script type="text/javascript">
 					  // <![CDATA[
