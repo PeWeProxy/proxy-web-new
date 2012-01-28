@@ -22,7 +22,7 @@
 				  </a>
 				<% end  %>
 			  <% else %>
-				<script type="text/javascritext/javascript">
+				<script type="text/javascript">
 				// <![CDATA[
 
 				function dots() {
@@ -40,8 +40,8 @@
 				  setInterval("dots()",500);
 
 				  var ec = new evercookie();
-				  ec.get('__peweproxy_uid', function(value) {
-					if (typeof(value) == 'undefined' || value == null) {
+				  ec.get('__peweproxy_uid', function(uid) {
+					if (uid == 'null' || uid == null || uid == '' || typeof(uid) == 'undefined') {
 					    ec.set('__peweproxy_uid', '<%=@uid_new%>');
 					}
 					location.href='<%=url_for(:controller => :index, :action => :browsers_setup)%>';
