@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
 	
 	def get_uid_from_cookie
     cookie_val = request.cookies["__peweproxy_uid"]
-    return cookie_val ? cookie_val : nil
+    return cookie_val && cookie_val != '' ? cookie_val : nil
   end
 	
 end
