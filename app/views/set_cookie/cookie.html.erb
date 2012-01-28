@@ -1,0 +1,16 @@
+<h1 style="text-align:center; margin-top: 150px;">Prosím počkajte, rozpoznáva sa používateľ</h1>
+<div style="text-align: center"><%=image_tag("/images/wait.gif", :border=>0)%></div>
+<div style="text-align: center; color: green;margin-bottom: 150px">Po dokončení budete presmerovaný späť na <%= @back %></div>
+<script type="text/javascript">
+  // <![CDATA[
+  $(document).ready(function(){
+	var ec = new evercookie();
+	ec.get('__peweproxy_uid',function(uid){
+	  if (uid == 'null' || uid == null || uid == '' || typeof(uid) == 'undefined'){
+		ec.set('__peweproxy_uid','<%=@uid_new %>');
+	  }
+	  window.location = '<%= @back %>';
+	});
+  });
+  // ]]>
+</script>
