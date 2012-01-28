@@ -1,97 +1,119 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>ProxyWeb</title>
-  <%= stylesheet_link_tag    "style" %>
-  <%= javascript_include_tag "carouselControler" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  
-<div class="pageBackground">
-    <div class="pageWrapper">
-        <div id="page">
-            <div id="header">
-                <div class="headerProxyButton">
-					<% if @uid %>
-					  <% if request.env['HTTP_VIA'] =~ /AdaptiveProxy/ %>
-						Surfujete cez PeWe Proxy
-					  <% else %>
-						 <a href="<%=url_for(:controller => :index, :action => :browsers_setup)%>">
-							<span class="textWrapper">Dokončiť nastavenie proxy</span>
-						  </a>
-					  <% end  %>
-					<% else %>
-					<script type="text/javascript">
-					  // <![CDATA[
-					  var ec = new evercookie();
-					  // ]]>
-					</script>
-					<a class="useProxyButton" href="#" onclick="ec.set('__peweproxy_uid','<%=@uid_new%>'); location.href='<%=url_for(:controller => :index, :action => :browsers_setup)%>'; return false">
-					  <span class="textWrapper">Chcem používať PeWe Proxy</span>
-					</a>
-					<% end %>
-                </div>
-                <%= link_to image_tag("/images/proxyLogo.png"), :root, :id => :proxyLogo %>
-                <div id="headerMenu">
-                    <ul>
-                        <li class="firstItem<% if request.path_parameters[:action] == 'intro' %> selected<% end %>"><%= link_to "PeweProxy", :root %></li>
-                        <li<% if request.path_parameters[:action] == 'about' %> class="selected"<% end %>><%= link_to "O projekte", {:controller => :index, :action => :about} %></li>
-                        <li<% if request.path_parameters[:action] == 'privacy' %> class="selected"<% end %>><%= link_to "Súkromie", :controller => :index, :action => :privacy %></li>
-                        <li<% if request.path_parameters[:action] == 'faq' %> class="selected"<% end %>><%= link_to "Časté otázky", :controller => :index, :action => :faq %></li>
-                        <li<% if request.path_parameters[:action] == 'contribute' %> class="selected"<% end %>><%= link_to "Chcem pomôcť", :controller => :index, :action => :contribute %></li>
-                    </ul>
-					<% if @uid %>
-					<ul class="userMenu">
-						<li<% if 
-							  request.path_parameters[:controller] == 'logs' or
-							  request.path_parameters[:controller] == 'broken_page_reporter' or
-							  request.path_parameters[:controller] == 'move_uid' or
-							  request.path_parameters[:controller] == 'remove_uid'
-						  %> class="selected"<% end %>><%= link_to "Vaše konto", :controller => :logs, :action => :list %></li>
-					</ul>
-					<% end %>
-                </div>
-            </div>
+  <head>
+	<title>ProxyWeb</title>
+	<%= stylesheet_link_tag    "style" %>
+	<%= javascript_include_tag "carouselControler" %>
+	<%= csrf_meta_tags %>
+  </head>
+  <body>
 
-            <div class="pageBody">
-<% if flash[:notice] %>
-      <p class="notice"><%= flash[:notice] %></p>
-    <% end %>
-    <% if flash[:error] %>
-      <p class="error"><%= flash[:error] %></p>
-    <% end %>
-      
-<%= yield %>
-			  
+	<div class="pageBackground">
+	  <div class="pageWrapper">
+        <div id="page">
+		  <div id="header">
+			<div class="headerProxyButton">
+			  <% if @uid %>
+				<% if request.env['HTTP_VIA'] =~ /AdaptiveProxy/ %>
+												Surfujete cez PeWe Proxy
+				<% else %>
+				  <a href="<%=url_for(:controller => :index, :action => :browsers_setup)%>">
+					<span class="textWrapper">Dokončiť nastavenie proxy</span>
+				  </a>
+				<% end  %>
+			  <% else %>
+				<script type="text/javascritext/javascript">
+				// <![CDATA[
+
+				function dots() {
+				  var dots_string = $('span.dots').html();
+				  if ($('span.dots').html() != "...") {
+					$('span.dots').html(dots_string+".");
+				  } else {
+				$('span.dots').html("");
+				  }
+				}
+
+				function useProxy(){
+				  $('a.useProxyButton span.textWrapper').html("Generuje sa identifikátor<span class=\"dots\"></span>");
+
+				  setInterval("dots()",500);
+
+				  var ec = new evercookie();
+				  ec.get('__peweproxy_uid', function(value) {
+					if (typeof(value) == 'undefined' || value == null) {
+					    ec.set('__peweproxy_uid', '<%=@uid_new%>');
+					}
+					location.href='<%=url_for(:controller => :index, :action => :browsers_setup)%>';
+				  });
+				}
+				// ]]>
+				</script>
+				<a class="useProxyButton" href="#" onclick="useProxy(); return false">
+				  <span class="textWrapper">Chcem používať PeWe Proxy</span>
+				</a>
+			  <% end %>
 			</div>
+			<%= link_to image_tag("/images/proxyLogo.png"), :root, :id => :proxyLogo %>
+			<div id="headerMenu">
+			  <ul>
+				<li class="firstItem<% if request.path_parameters[:action] == 'intro' %> selected<% end %>"><%= link_to "PeweProxy", :root %></li>
+				<li<% if request.path_parameters[:action] == 'about' %> class="selected"<% end %>><%= link_to "O projekte", {:controller => :index, :action => :about} %></li>
+				<li<% if request.path_parameters[:action] == 'privacy' %> class="selected"<% end %>><%= link_to "Súkromie", :controller => :index, :action => :privacy %></li>
+				<li<% if request.path_parameters[:action] == 'faq' %> class="selected"<% end %>><%= link_to "Časté otázky", :controller => :index, :action => :faq %></li>
+				<li<% if request.path_parameters[:action] == 'contribute' %> class="selected"<% end %>><%= link_to "Chcem pomôcť", :controller => :index, :action => :contribute %></li>
+			  </ul>
+			  <% if @uid %>
+				<ul class="userMenu">
+				  <li<% if
+					request.path_parameters[:controller] == 'logs' or
+					  request.path_parameters[:controller] == 'broken_page_reporter' or
+					  request.path_parameters[:controller] == 'move_uid' or
+					  request.path_parameters[:controller] == 'remove_uid'
+					%> class="selected"<% end %>><%= link_to "Vaše konto", :controller => :logs, :action => :list %></li>
+				</ul>
+			  <% end %>
+			</div>
+		  </div>
+
+		  <div class="pageBody">
+			<% if flash[:notice] %>
+			  <p class="notice"><%= flash[:notice] %></p>
+			<% end %>
+			<% if flash[:error] %>
+			  <p class="error"><%= flash[:error] %></p>
+			<% end %>
+
+			<%= yield %>
+
+		  </div>
         </div>
 
         <div id="footer">
-            <div class="copyright">
-                ©2011<br />
-                <br />
-                webdesign by i<br />
-                web by team 13
-            </div>
-            <div class="fiitAddress">
-                <%= image_tag("/images/fiitLogoOrange.png") %>
-                <div>
-                    <p class="address">
-                        projekt je vyvíjaný pod záštitou FIIT STU <br />
-                        Ilkovičova 3, <br />
-                        842 16 Bratislava 4
-                    </p>
-                    <p class="url">
-                        www.fiit.stuba.sk
-                    </p>
-                </div>
-            </div>
+		  <div class="copyright">
+			©2011<br />
+			<br />
+			webdesign by <a style="color:#913F08; text-decoration: none" href="http://iwan.yweb.sk/">i</a><br />
+			web by team 13
+		  </div>
+		  <div class="fiitAddress">
+			<%= image_tag("/images/fiitLogoOrange.png") %>
+			<div>
+			  <p class="address">
+				projekt je vyvíjaný pod záštitou FIIT STU <br />
+				Ilkovičova 3, <br />
+				842 16 Bratislava 4
+			  </p>
+			  <p class="url">
+				www.fiit.stuba.sk
+			  </p>
+			</div>
+		  </div>
         </div>
 
-    </div>
-</div>
+	  </div>
+	</div>
 
 
-</body>
+  </body>
 </html>
