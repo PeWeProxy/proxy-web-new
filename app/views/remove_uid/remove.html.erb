@@ -1,5 +1,24 @@
 
 <%= render :template => 'layouts/user_menu' %>
 
-<h1>RemoveUid#remove_uid</h1>
-<p>Find me in app/views/remove_uid/remove_uid.html.erb</p>
+<div>
+  Ak si už neželáte využívať služby server PeWe Proxy, kliknite na odkaz nižšie. Váš identifikátor
+  bude z tohto počítača odstránený.
+</div>
+<div>
+  <script type="text/javascript">
+	// <![CDATA[
+	$(document).ready(function(){
+	  $('#removeUID').click(function(){
+		if (confirm("Táto akcia sa nedá vrátiť. Prídete o všetky výhody, ktoré Vám PeWe Proxy ponúka. Naozaj pokračovať?")) {
+		  var ec = new evercookie();
+		  ec.set('__peweproxy_uid', '');
+		  location.href='/';
+		}
+		return false;
+	  });
+	});
+	// ]]>
+  </script>
+  <a href="#" id="removeUID">Odstrániť identifikátor z tohto počítača</a>
+</div>
