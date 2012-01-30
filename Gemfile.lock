@@ -32,6 +32,14 @@ GEM
     ansi (1.3.0)
     arel (2.2.1)
     builder (3.0.0)
+    capistrano (2.6.0)
+      highline
+      net-scp (>= 1.0.0)
+      net-sftp (>= 2.0.0)
+      net-ssh (>= 2.0.14)
+      net-ssh-gateway (>= 1.1.0)
+    capistrano-ext (1.2.1)
+      capistrano (>= 1.0.0)
     couch_potato (0.5.7)
       activemodel
       couchrest (>= 1.0.1)
@@ -43,11 +51,13 @@ GEM
     erubis (2.7.0)
     execjs (1.2.9)
       multi_json (~> 1.0)
+    highline (1.6.2)
     hike (1.2.1)
     i18n (0.6.0)
     jquery-rails (1.0.16)
       railties (~> 3.0)
       thor (~> 0.14)
+    json (1.5.1)
     json (1.5.1-x86-mingw32)
     mail (2.3.0)
       i18n (>= 0.4.0)
@@ -55,7 +65,14 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.17.2)
     multi_json (1.0.3)
-    mysql2 (0.2.6-x86-mingw32)
+    mysql2 (0.3.10)
+    net-scp (1.0.4)
+      net-ssh (>= 1.99.1)
+    net-sftp (2.0.5)
+      net-ssh (>= 2.0.9)
+    net-ssh (2.1.4)
+    net-ssh-gateway (1.1.0)
+      net-ssh (>= 1.99.1)
     polyglot (0.3.3)
     rack (1.3.5)
     rack-cache (1.1)
@@ -111,10 +128,14 @@ GEM
     uuidtools (2.1.2)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES
+  capistrano
+  capistrano-ext
   couch_potato
+  i18n
   jquery-rails
   mysql2
   rails (= 3.1.1)
