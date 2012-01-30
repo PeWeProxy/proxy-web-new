@@ -70,7 +70,8 @@ body, p, div, ul, li, img {
     }
     #header {
         height: 169px;
-        
+		position: relative;
+
         background: {
             color: #fcfcfc;
             image: url("../images/headerBackground.png");
@@ -85,6 +86,11 @@ body, p, div, ul, li, img {
                 right: 42px;
             }
         }
+		div.languages {
+			position: absolute;
+			right: 10px;
+			top: 5px;
+		}
         a#proxyLogo {
             display: block;
             height: 123px;
