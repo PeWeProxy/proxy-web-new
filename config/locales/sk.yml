@@ -38,7 +38,11 @@ sk:
   we_are_aware_of_this_problem: "O tomto probléme už vieme, ďakujeme za váš záujem."
   the_problem_has_been_reported_succesfully: "Problém sme zaevidovali, ďakujeme. Ak ste zadali váš email, budeme vás o zmenách informovať."
 
+#remove UID
 
+  remove_intro: Ak si už neželáte využívať služby server PeWe Proxy, kliknite na odkaz nižšie. Váš identifikátor bude z tohto počítača odstránený.
+  remove_warning: Táto akcia sa nedá vrátiť. Prídete o všetky výhody, ktoré Vám PeWe Proxy ponúka. Naozaj pokračovať?
+  remove_identifier_from_this_computer: Odstrániť identifikátor z tohto počítača
 
 #time
 
