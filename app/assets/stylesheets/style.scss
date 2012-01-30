@@ -53,7 +53,7 @@ body, p, div, ul, li, img {
         left: 6px;
         right: 6px;
     }
-    a.useProxyButton {
+    .useProxyButton {
         background-image: url("../images/buttonGreenTop.png");
         text-decoration: none;
         width: 368px;
@@ -68,6 +68,10 @@ body, p, div, ul, li, img {
             padding-top: 19px;
         }
     }
+	.useProxyButton.red {
+		background-image: url("../images/buttonRedTop.png");
+        color: #270000;
+	}
     #header {
         height: 169px;
 		position: relative;

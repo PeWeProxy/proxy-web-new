@@ -19,9 +19,11 @@
 			<div class="headerProxyButton">
 			  <% if @uid %>
 				<% if request.env['HTTP_VIA'] =~ /AdaptiveProxy/ %>
-												<%= t(:U_R_surfing_via_Pewe_Proxy) %>
+				  <span class="useProxyButton">
+					<span class="textWrapper"><%= t(:U_R_surfing_via_Pewe_Proxy) %></span>
+				  </span>
 				<% else %>
-				  <a href="<%=url_for(:controller => :index, :action => :browsers_setup)%>">
+				  <a class="useProxyButton red" href="<%=url_for(:controller => :index, :action => :browsers_setup)%>">
 					<span class="textWrapper"><%= t(:finish_proxy_setting) %> </span>
 				  </a>
 				<% end  %>
