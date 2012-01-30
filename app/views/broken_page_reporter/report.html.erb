@@ -1,7 +1,7 @@
 
 <%= render :template => 'layouts/user_menu' %>
 
-<h1>Nahlásenie nefunkčného webu</h1>
+<h1><%= t(:broken_pages_reporter) %></h1>
 <div class="broken_page_report">
   <%= form_tag(:action=>"create") do %>
   <table style="width: 800px">
@@ -10,16 +10,16 @@
       <td><%= text_field_tag(:url) %>*</td>
     </tr>
     <tr>
-      <td class="label"><%= label_tag(:email, "Váš e-mail:") %></td>
-      <td><%= text_field_tag(:email, '@') %> Ak nám necháte svoju adresu, budeme vás informovať o stave problému</td>
+      <td class="label"><%= label_tag(:email, t(:your_email)) %></td>
+      <td><%= text_field_tag(:email, '@') %> <%= t(:if_you_provide_your_address) %></td>
     </tr>
     <tr>
-      <td class="label"><%= label_tag(:post_description, "Opis problému:") %></td>
+      <td class="label"><%= label_tag(:post_description, t(:problem_description)) %></td>
       <td><%= text_area(:post, :description, :cols => 50, :rows => 3) %></td>
     </tr>
     <tr>
       <td colspan="2">
-        <%= submit_tag("Nahlástiť nefunkčný web", :class => 'submit') %>
+        <%= submit_tag(t(:report_broken_page), :class => 'submit') %>
       </td>
     </tr>
   </table>
@@ -27,15 +27,15 @@
   <% end %>
 </div>
 
-<h2>Zoznam problémov</h2>
+<h2><%= t(:issue_list)%></h2>
 <div>
   <table>
     <tr>
       <th>ID</th>
-      <th>Dátum pridania</th>
+      <th><%= t(:date_added) %></th>
       <th>URL</th>
-      <th>Popis</th>
-      <th>Stav</th>
+      <th><%= t(:description) %></th>
+      <th><%= t(:status) %></th>
     </tr>
   <% BrokenPages.order('timestamp DESC').all.each do |page| %>
     <tr>

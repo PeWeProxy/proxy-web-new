@@ -37,6 +37,15 @@ sk:
   wrong_url_format: "Zlý formát URL adresy."
   we_are_aware_of_this_problem: "O tomto probléme už vieme, ďakujeme za váš záujem."
   the_problem_has_been_reported_succesfully: "Problém sme zaevidovali, ďakujeme. Ak ste zadali váš email, budeme vás o zmenách informovať."
+  broken_pages_reporter: "Nahlásenie nefunkčného webu"
+  your_email: "Váš e-mail:"
+  if_you_provide_your_address: "Ak nám necháte svoju adresu, budeme vás informovať o stave problému"
+  problem_description: "Opis problému:"
+  report_broken_page: "Nahlástiť nefunkčný web"
+  issue_list: "Zoznam problémov"
+  date_added: "Dátum pridania"
+  description: "Popis"
+  status: "Stav"
 
 #remove UID
 

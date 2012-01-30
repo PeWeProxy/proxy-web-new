@@ -36,7 +36,16 @@ en:
   url_may_not_be_empty: "URL may not be empty."
   wrong_url_format: "Wrong URL format."
   we_are_aware_of_this_problem: "We are aware of this problem, thank you for your interest."
-  the_problem_has_been_reported_succesfully: "The problem has been reported succesfully. If you have provided an e-mail address, you will be informed about changes."
+  the_problem_has_been_reported_succesfully: "The problem has been reported succesfully. If you have provided an e-mail address, you will be informed about issue status changes."
+  broken_pages_reporter: "Broken-Page Reporter"
+  your_email: "Your e-mail:"
+  if_you_provide_your_address: "If you provide your e-mail address, we will inform you about issue status changes."
+  problem_description: "Problem description:"
+  report_broken_page: "Report broken page"
+  issue_list: "Issue list"
+  date_added: "Date added"
+  description: "Description"
+  status: "Status"
   
 #remove UID
 
