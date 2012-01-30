@@ -475,6 +475,33 @@ body, p, div, ul, li, img {
         /* end   --- Proxy index --- */
 
 
+        .content {
+            h2 {
+                font-size: 20px;
+                color: #a04609;
+                margin: {
+                    bottom: 20px;
+                    top: 0;
+                }
+            }
+
+            input[type="submit"], input[type="button"]  {
+                border: 1px solid #9f9f9f;
+                font-size: 14px;
+                cursor: pointer;
+
+                padding: {
+                    top: 5px;
+                    bottom: 5px;
+                }
+
+                background: {
+                    image: url("../images/carouselButtonBackground.png");
+                    repeat: x-repeat;
+                }
+            }
+        }
+
 
         /* start --- Proxy Setup --- */
         #proxySetup {
@@ -485,10 +512,109 @@ body, p, div, ul, li, img {
 
         
         /* start --- Proxy Logs --- */
+        .acountMenu {
+            .userMenu {
+                float: left;
+                width: 221px;
+                
+                ul {
+                    margin-top: 31px;
+                    position: relative;
+                    left: 1px;
+
+                    li {
+                        &.active {
+                            background: {
+                                image: url("../images/acountMenuBg.png");
+                                repeat: no-repeat;
+                            }
+                        }
+
+                        h3 {
+                            font-size: 16px;
+                            font: Trebuchet MS;
+                            font-weight: normal;
+                            color: 353535;
+                            margin: 0;
+
+                            a {
+                                display: block;
+                                text-decoration: none;
+
+                                padding: {
+                                    left: 15px;
+                                    top: 7px;
+                                    bottom: 7px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .contentWrapper {
+                float: right;
+                width: 725px;
+                
+                .topEmptySpace {
+                    height: 31px;
+                    padding-left: 27px;
+
+                    background: {
+                        image: url("../images/acountMenuDelimiterTop.png");
+                        repeat: no-repeat;
+                    }
+                }
+
+                .content {
+                    padding-left: 27px;
+                    border-left: 1px solid #c9c9c9;
+
+                    .additionalLogBox {
+                        margin-top: 12px;
+
+                        .pager {
+                            ul {
+                                padding-left: 200px;
+
+                                li {
+                                    float: left;
+                                    margin: {
+                                        top: 6px;
+                                        left: 5px;
+                                        right: 5px;
+                                    }
+
+                                    a {
+                                        font-size: 14px;
+                                        text-decoration: none;
+                                        color: #652901;
+                                    }
+                                }
+                            }
+                        }
+
+                        input {
+                            float: right;
+                            margin-right: 6px;
+                        }
+                    }
+                }
+
+                .bottomEmptySpace {
+                    height: 31px;
+                    padding-left: 27px;
+
+                    background: {
+                        image: url("../images/acountMenuDelimiterBottom.png");
+                        repeat: no-repeat;
+                    }
+                }
+            }
+        }
+
         table {
             width: 692px;
             border-collapse: collapse;
-            border-color: #a3a3a3;
 
             thead {
                 background-color: #fec59e;
@@ -499,6 +625,7 @@ body, p, div, ul, li, img {
                     padding-bottom: 3px;
                     padding-left: 10px;
                     text-align: left;
+                    border: 1px solid #a3a3a3;
 
                     &.timestamp {
                         width: 100px;
@@ -521,10 +648,18 @@ body, p, div, ul, li, img {
                     text-decoration: underline;
                 }
                 td {
+                    border: 1px solid #a3a3a3;
+
                     padding: {
                         top: 3px;
                         bottom: 2px;
                         left: 10px;
+                    }
+
+                    &.date {
+                        width: 80px;
+                        text-align: center;
+                        padding-left: 0;
                     }
 
                     &.delete {
