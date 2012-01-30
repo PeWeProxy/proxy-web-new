@@ -63,19 +63,16 @@
 			<%= link_to image_tag("/images/proxyLogo.png"), :root, :id => :proxyLogo %>
 			<div id="headerMenu">
 			  <ul>
-				<li class="firstItem<% if request.path_parameters[:action] == 'intro' %> selected<% end %>"><%= link_to t(:PeWeProxy), :root %></li>
-				<li<% if request.path_parameters[:action] == 'about' %> class="selected"<% end %>><%= link_to t(:about_project), {:controller => :index, :action => :about} %></li>
-				<li<% if request.path_parameters[:action] == 'privacy' %> class="selected"<% end %>><%= link_to t(:privacy), :controller => :index, :action => :privacy %></li>
-				<li<% if request.path_parameters[:action] == 'faq' %> class="selected"<% end %>><%= link_to t(:faq), :controller => :index, :action => :faq %></li>
-				<li<% if request.path_parameters[:action] == 'contribute' %> class="selected"<% end %>><%= link_to t(:contribute), :controller => :index, :action => :contribute %></li>
+				<%=nav_link t(:PeWeProxy), :root, true%>
+				<%=nav_link t(:about_project), {:controller => :index, :action => :about}%>
+				<%=nav_link t(:privacy), {:controller => :index, :action => :privacy}%>
+				<%=nav_link t(:faq), {:controller => :index, :action => :faq}%>
+				<%=nav_link t(:contribute), {:controller => :index, :action => :contribute}%>
 			  </ul>
 			  <% if @uid %>
 				<ul class="userMenu">
-				  <li<% if
-					request.path_parameters[:controller] == 'logs' or
-					  request.path_parameters[:controller] == 'broken_page_reporter' or
-					  request.path_parameters[:controller] == 'move_uid' or
-					  request.path_parameters[:controller] == 'remove_uid'
+				  <li<% if current_page?(:controller => :logs, :action => :list) or current_page?(:controller => :broken_page_reporter, :action => :report) or
+						current_page?(:controller => :move_uid, :action => :move) or current_page?(:controller => :remove_uid, :action => :remove)
 					%> class="selected"<% end %>><%= link_to t(:your_account), :controller => :logs, :action => :list %></li>
 				</ul>
 			  <% end %>
