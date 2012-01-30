@@ -31,6 +31,15 @@ sk:
   identifying_user_please_wait: "Prosím počkajte, rozpoznáva sa používateľ"
   you_will_be_redirected_automatically: "Po dokončení budete presmerovaný späť na "
   
+#broken page reporter
+
+  url_may_not_be_empty: "URL nesmie byť prázdna."
+  wrong_url_format: "Zlý formát URL adresy."
+  we_are_aware_of_this_problem: "O tomto probléme už vieme, ďakujeme za váš záujem."
+  the_problem_has_been_reported_succesfully: "Problém sme zaevidovali, ďakujeme. Ak ste zadali váš email, budeme vás o zmenách informovať."
+
+
+
 #time
 
   datetime:
