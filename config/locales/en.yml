@@ -26,3 +26,7 @@ en:
   delete_selected: "Delete selected"
   no_records: "No records found."
   when: "When"
+  
+#set cookie
+  identifying_user_please_wait: "Identifying user, please wait"
+  you_will_be_redirected_automatically: "When finished, you will be automatically redirected back to "

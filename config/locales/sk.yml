@@ -26,3 +26,7 @@ sk:
   delete_selected: "Vymazať označené"
   no_records: "Nenašli sa žiadne záznamy."
   when: "Kedy"
+  
+#set cookie
+  identifying_user_please_wait: "Prosím počkajte, rozpoznáva sa používateľ"
+  you_will_be_redirected_automatically: "Po dokončení budete presmerovaný späť na "
