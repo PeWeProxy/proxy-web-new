@@ -9,7 +9,7 @@
 	  $(this).blur();
 
 	  $("div.setupContentWrapper div.selected").removeClass("selected");
-	  $("div.setupContentWrapper div."+$(this).parent().attr("class")).addClass("selected");
+	  $("div.setupContentWrapper div."+$(this).parent().attr("class").split(/\s+/)[0]).addClass("selected");
 
 	  $(".browserSelector ul li.selected").removeClass("selected");
 	  $(this).parent().addClass("selected");
