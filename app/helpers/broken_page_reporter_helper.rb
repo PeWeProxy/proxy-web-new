@@ -2,9 +2,9 @@ module BrokenPageReporterHelper
 
   def get_status_text(status)
     status_texts = {
-      0 => "Ohlásené",
-      1 => "Čaká na spracovanie",
-      2 => "Vyriešené",
+      0 => t(:reported),
+      1 => t(:pending),
+      2 => t(:solved),
     }
     status_texts[status];
   end

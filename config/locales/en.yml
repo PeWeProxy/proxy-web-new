@@ -2,7 +2,7 @@ en:
 
 #main menu
 
-  finish_proxy_setting: "Finish proxy setting"
+  finish_proxy_setting: "Finish proxy setup"
   U_R_surfing_via_Pewe_Proxy: "You are surfing via PeWeProxy"
   generating_identifier: "Generating identifier"
   wanna_use_PeWe_Proxy: "I want to use PeWe Proxy"
@@ -46,6 +46,9 @@ en:
   date_added: "Date added"
   description: "Description"
   status: "Status"
+  reported: "Reported"
+  pending: "Pending"
+  solved: "Solved"
   
 #remove UID
 

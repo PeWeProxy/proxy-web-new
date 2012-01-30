@@ -46,6 +46,9 @@ sk:
   date_added: "Dátum pridania"
   description: "Popis"
   status: "Stav"
+  reported: "Ohlásené"
+  pending: "Čaká na spracovanie"
+  solved: "Vyriešené"
 
 #remove UID
 
