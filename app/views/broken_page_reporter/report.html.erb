@@ -1,50 +1,65 @@
+<div class="accountMenu">
+  <%= render :template => 'layouts/user_menu' %>
 
-<%= render :template => 'layouts/user_menu' %>
+  <div class="contentWrapper">
 
-<h1><%= t(:broken_pages_reporter) %></h1>
-<div class="broken_page_report">
-  <%= form_tag(:action=>"create") do %>
-  <table style="width: 800px">
-    <tr>
-      <td class="label"><%= label_tag(:url, "URL:") %></td>
-      <td><%= text_field_tag(:url) %>*</td>
-    </tr>
-    <tr>
-      <td class="label"><%= label_tag(:email, t(:your_email)) %></td>
-      <td><%= text_field_tag(:email, '@') %> <%= t(:if_you_provide_your_address) %></td>
-    </tr>
-    <tr>
-      <td class="label"><%= label_tag(:post_description, t(:problem_description)) %></td>
-      <td><%= text_area(:post, :description, :cols => 50, :rows => 3) %></td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <%= submit_tag(t(:report_broken_page), :class => 'submit') %>
-      </td>
-    </tr>
-  </table>
-	
-  <% end %>
-</div>
+	<div class="topEmptySpace"></div>
+	<div class="content">
 
-<h2><%= t(:issue_list)%></h2>
-<div>
-  <table>
-    <tr>
-      <th>ID</th>
-      <th><%= t(:date_added) %></th>
-      <th>URL</th>
-      <th><%= t(:description) %></th>
-      <th><%= t(:status) %></th>
-    </tr>
-  <% BrokenPages.order('timestamp DESC').all.each do |page| %>
-    <tr>
-      <td><%=page.id%></td>
-      <td><%=page.timestamp.to_s(:long)%></td>
-      <td><%=page.url%></td>
-      <td><%=page.description%></td>
-      <td><%=get_status_text(page.status)%></td>
-    </tr>
-  <% end %>
-  </table>
+	  <h4><%= t(:broken_pages_reporter) %></h4>
+	  <div class="broken_page_report">
+		<%= form_tag(:action=>"create") do %>
+		  <table>
+			<tr>
+			  <td class="label"><%= label_tag(:url, "URL:") %></td>
+			  <td><%= text_field_tag(:url) %>*</td>
+			</tr>
+			<tr>
+			  <td class="label"><%= label_tag(:email, t(:your_email)) %></td>
+			  <td><%= text_field_tag(:email, '@') %> <%= t(:if_you_provide_your_address) %></td>
+			</tr>
+			<tr>
+			  <td class="label"><%= label_tag(:post_description, t(:problem_description)) %></td>
+			  <td><%= text_area(:post, :description, :cols => 50, :rows => 3) %></td>
+			</tr>
+			<tr>
+			  <td colspan="2">
+				<%= submit_tag(t(:report_broken_page), :class => 'submit') %>
+			  </td>
+			</tr>
+		  </table>
+
+		<% end %>
+	  </div>
+
+	  <h4><%= t(:issue_list)%></h4>
+	  <div>
+		<table>
+		  <thead>
+			<tr>
+			  <th>ID</th>
+			  <th><%= t(:date_added) %></th>
+			  <th>URL</th>
+			  <th><%= t(:description) %></th>
+			  <th><%= t(:status) %></th>
+			</tr>
+		  </thead>
+		  <tbody>
+			<% BrokenPages.order('timestamp DESC').all.each do |page| %>
+			  <tr>
+				<td><%=page.id%></td>
+				<td><%=page.timestamp.to_s(:long)%></td>
+				<td><%=page.url%></td>
+				<td><%=page.description%></td>
+				<td><%=get_status_text(page.status)%></td>
+			  </tr>
+			<% end %>
+		  </tbody>
+		</table>
+	  </div>
+
+	</div>
+	<div class="bottomEmptySpace"></div>
+  </div>
+  <br class="floatCleaner" />
 </div>
