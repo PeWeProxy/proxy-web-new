@@ -1,5 +1,13 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  finish_proxy_setting: "Finish proxy setting"
+  U_R_surfing_via_Pewe_Proxy: "You are surfing via PeWeProxy"
+  generating_identifier: "Generating identifier"
+  wanna_use_PeWe_Proxy: "I want to use PeWe Proxy"
+  PeWeProxy: "PeweProxy"
+  about_project: "About Project"
+  privacy: "Privacy"
+  faq: "FAQ"
+  contribute: "Contribute"
+  your_account: "Your Account"
+  this_project_takes_place_at_FIIT_STU: "this project takes place at FIIT STU"
+  Bratislava_4: "842 16 Bratislava 4, Slovakia"

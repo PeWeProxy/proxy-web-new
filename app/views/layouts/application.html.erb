@@ -15,10 +15,10 @@
 			<div class="headerProxyButton">
 			  <% if @uid %>
 				<% if request.env['HTTP_VIA'] =~ /AdaptiveProxy/ %>
-												Surfujete cez PeWe Proxy
+												<%= t(:U_R_surfing_via_Pewe_Proxy) %>
 				<% else %>
 				  <a href="<%=url_for(:controller => :index, :action => :browsers_setup)%>">
-					<span class="textWrapper">Dokončiť nastavenie proxy</span>
+					<span class="textWrapper"><%= t(:finish_proxy_setting) %> </span>
 				  </a>
 				<% end  %>
 			  <% else %>
@@ -35,7 +35,7 @@
 				}
 
 				function useProxy(){
-				  $('a.useProxyButton span.textWrapper').html("Generuje sa identifikátor<span class=\"dots\"></span>");
+				  $('a.useProxyButton span.textWrapper').html(<%= t(:generating_identifier) %>"<span class=\"dots\"></span>");
 
 				  setInterval("dots()",500);
 
@@ -50,18 +50,18 @@
 				// ]]>
 				</script>
 				<a class="useProxyButton" href="#" onclick="useProxy(); return false">
-				  <span class="textWrapper">Chcem používať PeWe Proxy</span>
+				  <span class="textWrapper"><%= t(:wanna_use_PeWe_Proxy) %></span>
 				</a>
 			  <% end %>
 			</div>
 			<%= link_to image_tag("/images/proxyLogo.png"), :root, :id => :proxyLogo %>
 			<div id="headerMenu">
 			  <ul>
-				<li class="firstItem<% if request.path_parameters[:action] == 'intro' %> selected<% end %>"><%= link_to "PeweProxy", :root %></li>
-				<li<% if request.path_parameters[:action] == 'about' %> class="selected"<% end %>><%= link_to "O projekte", {:controller => :index, :action => :about} %></li>
-				<li<% if request.path_parameters[:action] == 'privacy' %> class="selected"<% end %>><%= link_to "Súkromie", :controller => :index, :action => :privacy %></li>
-				<li<% if request.path_parameters[:action] == 'faq' %> class="selected"<% end %>><%= link_to "Časté otázky", :controller => :index, :action => :faq %></li>
-				<li<% if request.path_parameters[:action] == 'contribute' %> class="selected"<% end %>><%= link_to "Chcem pomôcť", :controller => :index, :action => :contribute %></li>
+				<li class="firstItem<% if request.path_parameters[:action] == 'intro' %> selected<% end %>"><%= link_to t(:PeWeProxy), :root %></li>
+				<li<% if request.path_parameters[:action] == 'about' %> class="selected"<% end %>><%= link_to t(:about_project), {:controller => :index, :action => :about} %></li>
+				<li<% if request.path_parameters[:action] == 'privacy' %> class="selected"<% end %>><%= link_to t(:privacy), :controller => :index, :action => :privacy %></li>
+				<li<% if request.path_parameters[:action] == 'faq' %> class="selected"<% end %>><%= link_to t(:faq), :controller => :index, :action => :faq %></li>
+				<li<% if request.path_parameters[:action] == 'contribute' %> class="selected"<% end %>><%= link_to t(:contribute), :controller => :index, :action => :contribute %></li>
 			  </ul>
 			  <% if @uid %>
 				<ul class="userMenu">
@@ -70,7 +70,7 @@
 					  request.path_parameters[:controller] == 'broken_page_reporter' or
 					  request.path_parameters[:controller] == 'move_uid' or
 					  request.path_parameters[:controller] == 'remove_uid'
-					%> class="selected"<% end %>><%= link_to "Vaše konto", :controller => :logs, :action => :list %></li>
+					%> class="selected"<% end %>><%= link_to t(:your_account), :controller => :logs, :action => :list %></li>
 				</ul>
 			  <% end %>
 			</div>
@@ -100,9 +100,9 @@
 			<%= image_tag("/images/fiitLogoOrange.png") %>
 			<div>
 			  <p class="address">
-				projekt je vyvíjaný pod záštitou FIIT STU <br />
+				<%= t(:this_project_takes_place_at_FIIT_STU)%> <br />
 				Ilkovičova 3, <br />
-				842 16 Bratislava 4
+				<%= t(:Bratislava_4)%>
 			  </p>
 			  <p class="url">
 				www.fiit.stuba.sk

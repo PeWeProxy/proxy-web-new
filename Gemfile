@@ -37,3 +37,6 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
+
+#internationalization
+gem 'i18n'
