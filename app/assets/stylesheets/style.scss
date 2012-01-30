@@ -542,36 +542,36 @@ body, p, div, ul, li, img {
                         }
                     }
 
-                    &.firefoxBtn {
+                    &.firefox {
                         a {
                             background-image: url("../images/firefoxLogo.png");
                         }
                     }
-                    &.chromeBtn {
+                    &.chrome {
                         top: -70px;
                         a {
                             background-image: url("../images/chromeLogo.png");
                         }
                     }
-                    &.explorerBtn {
+                    &.explorer {
                         top: -140px;
                         a {
                             background-image: url("../images/ieLogo.png");
                         }
                     }
-                    &.operaBtn {
+                    &.opera {
                         top: -210px;
                         a {
                             background-image: url("../images/operaLogo.png");
                         }
                     }
-                    &.safariBtn {
+                    &.safari {
                         top: -280px;
                         a {
                             background-image: url("../images/safariLogo.png");
                         }
                     }
-                    &.otherBtn {
+                    &.other {
                         top: -350px;
                         a {
                             background-position: 15px 12px;
@@ -594,6 +594,14 @@ body, p, div, ul, li, img {
 
             .setupContentWrapper {
                 padding-left: 125px;
+
+				div.browser {
+					display: none;
+
+					&.selected {
+						display: block;
+					}
+				}
             }
         }
         /* end   --- Proxy Setup --- */
