@@ -1,23 +1,36 @@
+<div class="accountMenu">
+  <%= render :template => 'layouts/user_menu' %>
 
-<%= render :template => 'layouts/user_menu' %>
+  <div class="contentWrapper">
 
-<div>
-  <%= t(:remove_intro) %>
-</div>
-<div>
-  <script type="text/javascript">
-	// <![CDATA[
-	$(document).ready(function(){
-	  $('#removeUID').click(function(){
-		if (confirm("<%= t(:remove_warning) %>")) {
-		  var ec = new evercookie();
-		  ec.set('__peweproxy_uid', '');
-		  location.href='/';
-		}
-		return false;
-	  });
-	});
-	// ]]>
-  </script>
-  <a href="#" id="removeUID"><%=t(:remove_identifier_from_this_computer)%></a>
+	<div class="topEmptySpace"></div>
+	<div class="content">
+	  <h4><%=t(:remove_from_this_compter)%></h4>
+	  <div>
+		<%= t(:remove_intro) %>
+	  </div>
+	  <div>
+		<script type="text/javascript">
+		// <![CDATA[
+		$(document).ready(function(){
+		  $('#removeUID').click(function(){
+			if (confirm("<%= t(:remove_warning) %>")) {
+			  var ec = new evercookie();
+			  ec.set('__peweproxy_uid', '');
+			  location.href='/';
+			}
+			return false;
+		  });
+		});
+		// ]]>
+		</script>
+		<p style="text-align: center; font-weight: bold">
+		  <a href="#" id="removeUID"><%=t(:remove_identifier_from_this_computer)%></a>
+		</p>
+	  </div>
+
+	</div>
+	<div class="bottomEmptySpace"></div>
+  </div>
+  <br class="floatCleaner" />
 </div>

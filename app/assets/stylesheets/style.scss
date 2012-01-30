@@ -609,7 +609,7 @@ body, p, div, ul, li, img {
 
         
         /* start --- Proxy Logs --- */
-        .acountMenu {
+        .accountMenu {
             .userMenu {
                 float: left;
                 width: 221px;
@@ -665,6 +665,11 @@ body, p, div, ul, li, img {
                 .content {
                     padding-left: 27px;
                     border-left: 1px solid #c9c9c9;
+
+					h1, h2, h3, h4, h5 {
+						margin-top: 0px;
+						padding-top: 10px
+					}
 
                     .additionalLogBox {
                         margin-top: 12px;
