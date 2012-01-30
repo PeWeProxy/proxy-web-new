@@ -30,3 +30,16 @@ en:
 #set cookie
   identifying_user_please_wait: "Identifying user, please wait"
   you_will_be_redirected_automatically: "When finished, you will be automatically redirected back to "
+  
+#broken page reporter
+
+  url_may_not_be_empty: "URL may not be empty."
+  wrong_url_format: "Wrong URL format."
+  we_are_aware_of_this_problem: "We are aware of this problem, thank you for your interest."
+  the_problem_has_been_reported_succesfully: "The problem has been reported succesfully. If you have provided an e-mail address, you will be informed about changes."
+  
+#remove UID
+
+  remove_intro: If you don't want to use proxy anymore, click the link below. Your identifier will be removed from this computer.
+  remove_warning: This action cannot be undone. You will lost all the advantages of PeWe Proxy using. Do you want to continue?
+  remove_identifier_from_this_computer: Remove the identifier from your computer
