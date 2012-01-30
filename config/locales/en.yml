@@ -1,4 +1,7 @@
 en:
+
+#main menu
+
   finish_proxy_setting: "Finish proxy setting"
   U_R_surfing_via_Pewe_Proxy: "You are surfing via PeWeProxy"
   generating_identifier: "Generating identifier"
@@ -9,5 +12,17 @@ en:
   faq: "FAQ"
   contribute: "Contribute"
   your_account: "Your Account"
-  this_project_takes_place_at_FIIT_STU: "this project takes place at FIIT STU"
+  this_project_takes_place_at_FIIT_STU: "The project is realized at FIIT STU"
   Bratislava_4: "842 16 Bratislava 4, Slovakia"
+
+#user menu
+
+  activity_record: "Activity Record"
+  broken_page_reporter: "Broken-Page Reporter"
+  move_to_another_computer: "Move to Another Computer"
+  remove_from_this_compter: "Removefrom This Computer"
+  older: "older"
+  unknown: "unknown"
+  delete_selected: "Delete selected"
+  no_records: "No records found."
+  when: "When"

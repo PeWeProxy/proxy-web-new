@@ -1,14 +1,14 @@
 <ul>
   <li<% if request.path_parameters[:action] == 'list' %> class="selected"<% end %>>
-	<%= link_to "Záznamy o Vašej aktivite", :controller => :logs, :action => :list %>
+	<%= link_to t(:activity_record), :controller => :logs, :action => :list %>
   </li>
   <li<% if request.path_parameters[:action] == 'report' %> class="selected"<% end %>>
-	<%= link_to "Nahlástiť nefunkčný web", :controller => :broken_page_reporter, :action => :report  %>
+	<%= link_to t(:broken_page_reporter), :controller => :broken_page_reporter, :action => :report  %>
   </li>
   <li<% if request.path_parameters[:action] == 'move' %> class="selected"<% end %>>
-	<%= link_to "Používať na inom prehliadači", :controller => :move_uid, :action => :move  %>
+	<%= link_to t(:move_to_another_computer), :controller => :move_uid, :action => :move  %>
   </li>
   <li<% if request.path_parameters[:action] == 'remove' %> class="selected"<% end %>>
-	<%= link_to "Odstrániť z tohto počítača", :controller => :remove_uid, :action => :remove  %>
+          <%= link_to t(:remove_from_this_compter), :controller => :remove_uid, :action => :remove  %>
   </li>
 </ul>

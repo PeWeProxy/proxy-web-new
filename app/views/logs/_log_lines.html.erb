@@ -4,7 +4,7 @@
       <% unless log.page.nil? %>
         <a href="<%= log.page %>" title="<%= log.page %>"><%= truncate log.page, :length => 50 %></a>
       <% else %>
-        unknown
+        <%= t(:unknown) %>
       <% end %>
     </td>
     <td class="timestamp" title="<%= log.timestamp %>"><%= time_ago_in_words(log.timestamp) %></td>

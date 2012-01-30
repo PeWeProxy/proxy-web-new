@@ -1,4 +1,7 @@
 sk:
+
+#main menu
+
   finish_proxy_setting: "Dokončenie nastavenia proxy"
   U_R_surfing_via_Pewe_Proxy: "Surfujete cez PeWe Proxy"
   generating_identifier: "Generuje sa identifikátor"
@@ -11,3 +14,15 @@ sk:
   your_account: "Vaše konto"
   this_project_takes_place_at_FIIT_STU: "projekt je vyvíjaný pod záštitou FIIT STU"
   Bratislava_4: "842 16 Bratislava 4"
+  
+#user menu
+
+  activity_record: "Záznamy o Vašej aktivite"
+  broken_page_reporter: "Nahlástiť nefunkčný web"
+  move_to_another_computer: "Používať na inom počítači"
+  remove_from_this_compter: "Odstrániť z tohto počítača"
+  older: "staršie"
+  unknown: "neznáma"
+  delete_selected: "Vymazať označené"
+  no_records: "Nenašli sa žiadne záznamy."
+  when: "Kedy"
