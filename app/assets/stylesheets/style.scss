@@ -507,6 +507,85 @@ body, p, div, ul, li, img {
         #proxySetup {
             border: 1px solid red;
         }
+
+        .comment {
+            margin-bottom: 30px;
+        }
+        .setupContent {
+            background-image: url("../images/setupContentBg.png");
+            background-position: 95px 0;
+            background-repeat: repeat-y;
+
+            .browserSelector {
+                width: 96px;
+                float: left;
+
+                li {
+                    height: 152px;
+                    width: 96px;
+                    position: relative;
+                    
+                    &.selected {
+                        background: {
+                            image: url("../images/setupMenuBg.png");
+                            repeat: no-repeat;
+                        }
+                    }
+
+                    &.firefoxBtn {
+                        a {
+                            background-image: url("../images/firefoxLogo.png");
+                        }
+                    }
+                    &.chromeBtn {
+                        top: -70px;
+                        a {
+                            background-image: url("../images/chromeLogo.png");
+                        }
+                    }
+                    &.explorerBtn {
+                        top: -140px;
+                        a {
+                            background-image: url("../images/ieLogo.png");
+                        }
+                    }
+                    &.operaBtn {
+                        top: -210px;
+                        a {
+                            background-image: url("../images/operaLogo.png");
+                        }
+                    }
+                    &.safariBtn {
+                        top: -280px;
+                        a {
+                            background-image: url("../images/safariLogo.png");
+                        }
+                    }
+                    &.otherBtn {
+                        top: -350px;
+                        a {
+                            background-position: 15px 12px;
+                            background-image: url("../images/browserOther.png");
+                        }
+                    }
+                }
+                a {
+                    display: block;
+                    width: 85px;
+                    height: 79px;
+                    margin-left: 11px;
+                    
+                    background: {
+                        position: 10px 10px;
+                        repeat: no-repeat;
+                    }
+                }
+            }
+
+            .setupContentWrapper {
+                padding-left: 125px;
+            }
+        }
         /* end   --- Proxy Setup --- */
 
 
@@ -628,7 +707,7 @@ body, p, div, ul, li, img {
                     border: 1px solid #a3a3a3;
 
                     &.timestamp {
-                        width: 170px;
+                        width: 100px;
                     }
                     &.delete {
                         padding-left: 0;
