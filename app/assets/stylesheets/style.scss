@@ -607,13 +607,30 @@ body, p, div, ul, li, img {
             .setupContentWrapper {
                 padding-left: 125px;
 
-				div.browser {
-					display: none;
+                div.browser {
+                    display: none;
 
-					&.selected {
-						display: block;
-					}
-				}
+                    &.selected {
+                        display: block;
+                    }
+		}
+
+                ol li {
+                    list-style-type: decimal;
+
+                    img {
+                        display: block;
+
+                        margin: {
+                            top: 10px;
+                            bottom: 30px;
+                        }
+                    }
+                }
+
+                input.pac {
+                    width: 282px;
+                }
             }
         }
         /* end   --- Proxy Setup --- */
