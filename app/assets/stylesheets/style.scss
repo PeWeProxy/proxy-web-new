@@ -163,12 +163,22 @@ body, p, div, ul, li, img {
         font-size: 26px;
 
         margin: {
-            left: 21px;
+            left: 0px;
             right: 21px;
             bottom: 9px;
             top: 14px;
         }
     }
+
+	p {
+		margin-bottom: 15px;
+		text-align: justify;
+		line-height: 26px;
+	}
+
+	img {
+		margin: 10px;
+	}
 
     .pageBody {
         font-size: 15px;
