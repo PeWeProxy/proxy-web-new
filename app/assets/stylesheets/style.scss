@@ -170,14 +170,16 @@ body, p, div, ul, li, img {
         }
     }
 
-	p {
-		margin-bottom: 15px;
-		text-align: justify;
-		line-height: 26px;
-	}
+	.text {
+		p {
+			margin-bottom: 15px;
+			text-align: justify;
+			line-height: 26px;
+		}
 
-	img {
-		margin: 10px;
+		img {
+			margin: 10px;
+		}
 	}
 
     .pageBody {
