@@ -15,6 +15,22 @@
 	  $(this).parent().addClass("selected");
 	  return false;
 	});
+
+	if ($.browser.mozilla) {
+	  $("div.browserSelector ul li.firefox a").click();
+	}
+	else if ($.browser.webkit) {
+	  $("div.browserSelector ul li.chrome a").click();
+	}
+	else if ($.browser.msie) {
+	  $("div.browserSelector ul li.explorer a").click();
+	}
+	else if ($.browser.opera) {
+	  $("div.browserSelector ul li.opera a").click();
+	}
+	else if ($.browser.safari) {
+	  $("div.browserSelector ul li.safari a").click();
+	}
   });
   
   // ]]>
