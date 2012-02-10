@@ -1,0 +1,174 @@
+<h1>How to start using PeWe proxy</h1>
+
+ <%= render :partial => 'browsers_setup_menu' %>
+
+<div class="comment">
+  Becoming a new PeWe proxy user takes only few seconds. The only thing you need to do is to tell your browser to send requests through our proxy server. Follow these steps:
+</div>
+<div class="setupContent">
+  <br class="floatCleaner" />
+  <div class="browserSelector">
+	<ul>
+	  <li class="firefox selected"><a href="#1" title="Mozilla Firefox"></a></li>
+	  <li class="chrome"><a href="#2" title="Google Chrome"></a></li>
+	  <li class="explorer"><a href="#3" title="Internet Explorer"></a></li>
+	  <li class="opera"><a href="#4" title="Opera"></a></li>
+	  <li class="safari"><a href="#5" title="Safari"></a></li>
+	  <li class="other"><a href="#6"></a></li>
+	</ul>
+  </div>
+  <div class="setupContentWrapper">
+	<div class="browser firefox selected">
+              <ol>
+                <li>
+                    Select <strong>Options</strong> from main menu.
+                    <img src="/images/setup_ff/step_1.png" alt="step_1" />
+                </li>
+                <li>
+                    Select the <strong>Advanced</strong> tab from the main tabs.
+                </li>
+                <li>
+                    In this window select the <strong>Network</strong> tab.
+                </li>
+                <li>
+                    In section <strong>Connection</strong> click the <strong>Settings</strong> button.
+                    <img src="/images/setup_ff/step_2.png" alt="step_2-4" />
+                </li>
+                <li>
+                    In <strong>Connection settings</strong>, select <strong>Automatic proxy configuration URL</strong>.
+                </li>
+                <li>
+                    Set following URL address as shows the picture below: <input type="text" class="pac" readonly="readonly" value="http://peweproxy.fiit.stuba.sk/proxy.pac" />
+                    <img src="/images/setup_ff/step_3.png" alt="step_5-6" />
+                </li>
+                <li>
+                    Don't forget to set up your identifier.
+                </li>
+              </ol>
+        </div>
+	<div class="browser chrome">
+              <ol>
+                <li>
+                    Select <strong>Options</strong> from main menu.
+                    <img src="/images/setup_chrome/step_1.png" alt="step_1" />
+                </li>
+                <li>
+                    From menu on left select <strong>Under the Hood</strong>.
+                </li>
+                <li>
+                    In <strong>Network</strong> section click on <strong>Change proxy settings...</strong> button.
+                    <img src="/images/setup_chrome/step_2.png" alt="step_2-3" />
+                </li>
+                <li>
+                    In <strong>Connections</strong> tab click on <strong>LAN settings</strong>.
+                    <img src="/images/setup_chrome/step_3.png" alt="step_4-5" />
+                </li>
+                <li>
+                    In <strong>LAN settings</strong> window, select <strong>Use automatic configuration script</strong> option.
+                </li>
+                <li>
+                    Set following URL address as shows the picture below: <input type="text" class="pac" readonly="readonly" value="http://peweproxy.fiit.stuba.sk/proxy.pac" />
+                    <img src="/images/setup_chrome/step_4.png" alt="step_5-6" />
+                </li>
+                <li>
+                    Don't forget to set up your identifier.
+                </li>
+              </ol>
+        </div>
+	<div class="browser explorer">
+              <ol>
+                <li>
+                    Select <strong>Internet Options</strong> in main menu.
+                    <img src="/images/setup_ie/step_1.png" alt="step_1" />
+                </li>
+                <li>
+                    Select the <strong>Connections</strong> tab.
+                    <img src="/images/setup_ie/step_2.png" alt="step_2" />
+                </li>
+                <li>
+                    Click on <strong>LAN settings</strong> button.
+                    <img src="/images/setup_ie/step_3.png" alt="step_3" />
+                </li>
+                <li>
+                    Check the <strong>Use automatic configuration script</strong> option.
+                </li>
+                <li>
+                    Set following URL address as shows the picture below: <input type="text" class="pac" readonly="readonly" value="http://peweproxy.fiit.stuba.sk/proxy.pac" />
+                    <img src="/images/setup_ie/step_4.png" alt="step_4-5" />
+                </li>
+                <li>
+                    Don't forget to set up your identifier.
+                </li>
+              </ol>
+        </div>
+	<div class="browser opera">
+              <ol>
+                <li>
+                    Select <strong>Preferences...</strong> from the <strong>Settings</strong> menu.
+                    <img src="/images/setup_opera/step_1.png" alt="step_1" />
+                </li>
+                <li>
+                    Select the <strong>Advanced</strong> tab.
+                    <img src="/images/setup_opera/step_2.png" alt="step_2" />
+                </li>
+                <li>
+                    Select <strong>Network</strong> from the list on the left.
+                </li>
+                <li>
+                    Click on <strong>Proxy Servers...</strong> button.
+                    <img src="/images/setup_opera/step_3.png" alt="step_3-4" />
+                </li>
+                <li>
+                    Select the <strong>Use automatic proxy configuration</strong> option.
+                </li>
+                <li>
+                    Set following URL address as shows the picture below: <input type="text" class="pac" readonly="readonly" value="http://peweproxy.fiit.stuba.sk/proxy.pac" />
+                    <img src="/images/setup_opera/step_4.png" alt="step_5-6" />
+                </li>
+                <li>
+                    Don't forget to set up your identifier.
+                </li>
+              </ol>
+        </div>
+	<div class="browser safari">
+              <ol>
+                <li>
+                    Select <strong>Preferences...</strong> from the main menu.
+                    <img src="/images/setup_safari/step_1.png" alt="step_1" />
+                </li>
+                <li>
+                    Select the <strong>Advanced</strong> tab.
+                </li>
+                <li>
+                    Click on <strong>Change Settings...</strong>
+                    <img src="/images/setup_safari/step_2.png" alt="step_2" />
+                </li>
+                <li>
+                    Select the <strong>Connections</strong> tab.
+                    <img src="/images/setup_safari/step_3.png" alt="step_3" />
+                </li>
+                <li>
+                    Click on <strong>LAN settings</strong> button.
+                    <img src="/images/setup_safari/step_4.png" alt="step_4" />
+                </li>
+                <li>
+                    Check the <strong>Use automatic configuration script</strong> option.
+                </li>
+                <li>
+                    Set following URL address as shows the picture below: <input type="text" class="pac" readonly="readonly" value="http://peweproxy.fiit.stuba.sk/proxy.pac" />
+                    <img src="/images/setup_safari/step_5.png" alt="step_5-6" />
+                </li>
+                <li>
+                    Don't forget to set up your identifier.
+                </li>
+              </ol>
+        </div>
+	<div class="browser other">
+          We recommend to set up your browser proxy settings via .pac file. Use this address: <input type="text" class="pac" readonly="readonly" value="http://peweproxy.fiit.stuba.sk/proxy.pac" />.
+          <br />If your browser does not support .pac files configuration, you can use direct proxy setting: <input type="text" class="pac" readonly="readonly" value="http://peweproxy.fiit.stuba.sk:9666" />
+        </div>
+
+  </div>
+  <br class="floatCleaner" />
+</div>
+<br class="floatCleaner" />

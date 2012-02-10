@@ -1,44 +1,9 @@
 <h1>Začať používať PeWe Proxy</h1>
 
-<script type="text/javascript">
-  
-  // <![CDATA[
-  
-  $(document).ready(function(){
-	$("div.browserSelector ul li a").click(function(){
-	  $(this).blur();
-
-	  $("div.setupContentWrapper div.selected").removeClass("selected");
-	  $("div.setupContentWrapper div."+$(this).parent().attr("class").split(/\s+/)[0]).addClass("selected");
-
-	  $(".browserSelector ul li.selected").removeClass("selected");
-	  $(this).parent().addClass("selected");
-	  return false;
-	});
-
-	if ($.browser.mozilla) {
-	  $("div.browserSelector ul li.firefox a").click();
-	}
-	else if ($.browser.webkit) {
-	  $("div.browserSelector ul li.chrome a").click();
-	}
-	else if ($.browser.msie) {
-	  $("div.browserSelector ul li.explorer a").click();
-	}
-	else if ($.browser.opera) {
-	  $("div.browserSelector ul li.opera a").click();
-	}
-	else if ($.browser.safari) {
-	  $("div.browserSelector ul li.safari a").click();
-	}
-  });
-  
-  // ]]>
-  
-</script>
+ <%= render :partial => 'browsers_setup_menu' %>
 
 <div class="comment">
-  Začať používať PeWe Proxy je otázkou okamihu. Jediné čo potrebujete urobiť je povedať vášmu webovému prehliadaču, aby ku stránkam pristupoval cez PeWe Proxy. Riaaďte sa pokynmi nižšie.
+  Začať používať PeWe Proxy je otázkou okamihu. Jediné čo potrebujete urobiť je povedať vášmu webovému prehliadaču, aby ku stránkam pristupoval cez PeWe Proxy. Riaďte sa pokynmi nižšie.
 </div>
 <div class="setupContent">
   <br class="floatCleaner" />
@@ -88,10 +53,10 @@
                     <img src="/images/setup_chrome/step_1.png" alt="step_1" />
                 </li>
                 <li>
-                    V možnostiach klikni na položku <strong>Pod kapotou (Advanced)</strong>
+                    V možnostiach klikni na položku <strong>Pod kapotou (Under the Hood)</strong>
                 </li>
                 <li>
-                    V časti <strong>Sieť (Network)</strong> klikni na <strong>Zmeniť nastavenia proxy... (Zmeniť nastavenia proxy...)</strong>
+                    V časti <strong>Sieť (Network)</strong> klikni na <strong>Zmeniť nastavenia proxy... (Change proxy settings...)</strong>
                     <img src="/images/setup_chrome/step_2.png" alt="step_2-3" />
                 </li>
                 <li>
@@ -128,7 +93,7 @@
                     V okne <strong>Nastavenia LAN (LAN settings)</strong> zvoľ možnosť <strong>Použiť automatickú konfigurácia skriptom (Use automatic configuration script)</strong>
                 </li>
                 <li>
-                    Do poľa označeného číslom 6 vlož túto adresu: <input type="text" class="pac" readonly="readonly" value="http://peweproxy.fiit.stuba.sk/proxy.pac" />
+                    Do poľa označeného číslom 5 vlož túto adresu: <input type="text" class="pac" readonly="readonly" value="http://peweproxy.fiit.stuba.sk/proxy.pac" />
                     <img src="/images/setup_ie/step_4.png" alt="step_4-5" />
                 </li>
                 <li>
@@ -150,7 +115,7 @@
                     Vyber položku <strong>Sieť (Network)</strong>
                 </li>
                 <li>
-                    Klikni na tlačidlo <strong>Serveri proxy (Proxy Servers...)</strong>
+                    Klikni na tlačidlo <strong>Servery proxy (Proxy Servers...)</strong>
                     <img src="/images/setup_opera/step_3.png" alt="step_3-4" />
                 </li>
                 <li>
@@ -175,7 +140,7 @@
                     V okne nastavení vyberte záložku <strong>Pokročilé (Advanced)</strong>
                 </li>
                 <li>
-                    Kliknite na tlačidlo <strong>Zmeniž nastavenia (Change Settings...)</strong>
+                    Kliknite na tlačidlo <strong>Zmeniť nastavenia (Change Settings...)</strong>
                     <img src="/images/setup_safari/step_2.png" alt="step_2" />
                 </li>
                 <li>
