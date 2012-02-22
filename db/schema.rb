@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(:version => 0) do
 	t.integer	"status",					:null => false,	:default => 0
  end
 
-  create_table	"stored_apuids", :force => true do |t|
+  create_table	"stored_uids", :force => true do |t|
 	t.string	"identifier"
 	t.string	"uid"
 	t.datetime	"valid_until"

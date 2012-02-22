@@ -1,0 +1,12 @@
+<h1 style="text-align:center; margin-top: 150px;"><%=t(:identifying_user_please_wait)%></h1>
+<div style="text-align: center"><%=image_tag("/images/wait.gif", :border=>0)%></div>
+<div style="text-align: center; color: green;margin-bottom: 150px"><%=t(:you_will_be_redirected_automatically)%> <%= @back %></div>
+<script type="text/javascript">
+  // <![CDATA[
+  $(document).ready(function(){
+	var ec = new evercookie();
+	ec.set('__peweproxy_uid','<%=@retrieved_uid%>');
+	window.location = '<%= @back %>';
+  });
+  // ]]>
+</script>
