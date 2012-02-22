@@ -5,7 +5,7 @@ class MoveUidController < ApplicationController
     elsif (!StoredUid.find_by_identifier(params[:identifier]).nil?)
       flash[:error] = "sorry, this identifier is already taken"
     else
-      StoredUid.create(:identifier => params[:identifier], :uid => "123456", :valid_until => Date.today + 30)
+      StoredUid.create(:identifier => params[:identifier], :uid => @uid, :valid_until => Date.today + 30)
     end
     redirect_to :back
   end
