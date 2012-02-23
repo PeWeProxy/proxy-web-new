@@ -7,7 +7,7 @@
 	<div class="content">
 	  
           <h4>Presun ID na iný počítač</h4>
-          <div style="padding: 0 0 50px 0">
+          <div>
             <p>
               Pri nastavovaní proxy sme ti vygenerovali jedinečný UID kód, aby
               sme ťa vedeli identifokovať. Ak by si chcel používať proxy server
@@ -25,9 +25,9 @@
               Aby si toto UID nemusel pamätať, môžeš si ho tu uložiť pod nejakým
               kódom a neskôr stiahnuť.
             </p>
+            <br/>
 
             <h5>Chcem si uložiť svoje UID</h5>
-
             <%= form_tag(:action=>"store") do %>
               <p>
                 <%= label_tag(:identifier, "Tvoj kód (napríklad tvoje meno)") %>
@@ -37,9 +37,9 @@
                 <%= submit_tag("Ulož", :class => 'submit') %>
               </p>
             <% end %>
-
+            <br/>
+            
             <h5>ID mám už uložené, chcem ho používať na tomto PC.</h5>
-
             <%= form_tag(:action => "retrieve_uid") do %>
               <p>
                 <%= label_tag(:identifier, "Tvoj kód") %>
@@ -54,37 +54,7 @@
               </p>
             <% end %>
 
-
-
           </div>
-
-          <!--
-          <div style="padding: 50px 0 50px 0">
-
-		<%= form_tag(:action=>"create") do %>
-		  <table>
-			<tr>
-			  <td class="label"><%= label_tag(:url, "URL:") %></td>
-			  <td><%= text_field_tag(:url) %>*</td>
-			</tr>
-			<tr>
-			  <td class="label"><%= label_tag(:email, t(:your_email)) %></td>
-			  <td><%= text_field_tag(:email, '@') %> <%= t(:if_you_provide_your_address) %></td>
-			</tr>
-			<tr>
-			  <td class="label"><%= label_tag(:post_description, t(:problem_description)) %></td>
-			  <td><%= text_area(:post, :description, :cols => 50, :rows => 3) %></td>
-			</tr>
-			<tr>
-			  <td colspan="2">
-				<%= submit_tag(t(:report_broken_page), :class => 'submit') %>
-			  </td>
-			</tr>
-		  </table>
-
-		<% end %>
-	  </div>
-          -->
 
 	</div>
 	<div class="bottomEmptySpace"></div>

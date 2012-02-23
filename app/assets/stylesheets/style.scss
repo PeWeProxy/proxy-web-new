@@ -824,6 +824,21 @@ body, p, div, ul, li, img {
             }
         }
         /* end   --- Proxy Logs --- */
+
+        /* start --- Move UID --- */
+
+        .contentWrapper {
+            .content{
+                h5{
+                    font-size: 15px;
+                    font-style: italic;
+                    font-weight: bold;
+                    margin: 0 0 0 0;
+                }
+            }
+        }
+
+        /* end --- Move UID --- */
     }
 }
 #footer {
