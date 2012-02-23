@@ -23,6 +23,11 @@
                 <%= label_tag(:identifier, t(:your_code_name_for_example)) %>
                 <%= text_field_tag(:identifier) %>
               </p>
+              <% if flash[:store_error] %>
+                <div class="error">
+                  <%= flash[:store_error] %>
+                </div>
+              <% end %>
               <p>
                 <%= submit_tag(t(:store), :class => 'submit') %>
               </p>
@@ -39,6 +44,11 @@
                 <%= label_tag(:leave_uid, t(:dont_remove)) %>
                 <%= check_box_tag :leave_uid, "1", false %>
               </p>
+              <% if flash[:retrieve_error] %>
+                <div class="error">
+                  <%= flash[:retrieve_error] %>
+                </div>
+              <% end %>
               <p>
                 <%= submit_tag t(:set_me_my_uid), :class => 'submit'%>
               </p>

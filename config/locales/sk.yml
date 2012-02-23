@@ -63,6 +63,10 @@ sk:
   your_code: "Tvoj kód"
   dont_remove: "Nemaž môj kód, ešte si chcem nastaviť proxy na inom PC"
   set_me_my_uid: "Nastav mi môj identifikátor"
+  you_must_choose_a_code: "Chyba: nezadal si kód"
+  identifier_is_taken: "Ľutujeme, ale tento kód je obsadený. Zvoľ si iný kód."
+  missing_code_for_retrieval: "Chyba: nezadal si kód"
+  identifier_not_found: "Chyba: nenašiel sa žiadny záznam uložený pod kódom"
 
 #remove UID
 

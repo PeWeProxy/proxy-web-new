@@ -63,6 +63,10 @@ en:
   your_code: "Your code"
   dont_remove: "Don't remove my code, I will use it on another computer"
   set_me_my_uid: "Set me my proxy identifier"
+  you_must_choose_a_code: "Error: you must choose a code"
+  identifier_is_taken: "Sorry, this identifier is already taken."
+  missing_code_for_retrieval: "Error: missing code for retrieval"
+  identifier_not_found: "Error: did not find any record with identifier"
 
 #remove UID
 

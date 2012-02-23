@@ -1,9 +1,9 @@
 class MoveUidController < ApplicationController
   def store
     if (params[:identifier].empty?)
-      flash[:error] = "you must choose an identifier!"
+      flash[:store_error] = t(:you_must_choose_a_code)
     elsif (!StoredUid.find_by_identifier(params[:identifier]).nil?)
-      flash[:error] = "sorry, this identifier is already taken"
+      flash[:store_error] = t(:identifier_is_taken)
     else
       StoredUid.create(:identifier => params[:identifier], :uid => @uid, :valid_until => Date.today + 30)
     end
@@ -13,12 +13,12 @@ class MoveUidController < ApplicationController
   def retrieve_uid
     @back = params[:back]
     if(params[:identifier].empty?)
-      flash[:error] = "missing identifier for retrieval"
+      flash[:retrieve_error] = t(:missing_code_for_retrieval)
       redirect_to :back and return
     end
     retrieved_uid = StoredUid.find_by_identifier(params[:identifier])
     if(retrieved_uid.nil?)
-      flash[:error] = "Did not find an UID with identifier \'#{params[:identifier]}\' in the database."
+      flash[:retrieve_error] = "#{t(:identifier_not_found)} \'#{params[:identifier]}\'"
       redirect_to :back and return;
     end
 
