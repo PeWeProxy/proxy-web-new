@@ -6,51 +6,41 @@
 	<div class="topEmptySpace"></div>
 	<div class="content">
 	  
-          <h4>Presun ID na iný počítač</h4>
+          <h4><%=t(:move_uid_heading)%></h4>
           <div>
-            <p>
-              Pri nastavovaní proxy sme ti vygenerovali jedinečný UID kód, aby
-              sme ťa vedeli identifokovať. Ak by si chcel používať proxy server
-              aj na inom počítači, je pre nás dôležité, aby si všade používal
-              rovnaké ID.
-            </p>
+            <p><%=t(:move_intro)%></p>
             <br/>
 
-            <p>
-              Tvoje aktuálne UID: <em class="uid"><%= @uid %></em>
-            </p>
+            <p><%=t(:your_current_uid)%> <em class="uid"><%= @uid %></em></p>
             <br/>
 
-            <p>
-              Aby si toto UID nemusel pamätať, môžeš si ho tu uložiť pod nejakým
-              kódom a neskôr stiahnuť.
-            </p>
+            <p><%=t(:you_can_save_this)%></p>
             <br/>
 
-            <h5>Chcem si uložiť svoje UID</h5>
+            <h5><%=t(:i_want_to_store_my_uid)%></h5>
             <%= form_tag(:action=>"store") do %>
               <p>
-                <%= label_tag(:identifier, "Tvoj kód (napríklad tvoje meno)") %>
+                <%= label_tag(:identifier, t(:your_code_name_for_example)) %>
                 <%= text_field_tag(:identifier) %>
               </p>
               <p>
-                <%= submit_tag("Ulož", :class => 'submit') %>
+                <%= submit_tag(t(:store), :class => 'submit') %>
               </p>
             <% end %>
             <br/>
             
-            <h5>ID mám už uložené, chcem ho používať na tomto PC.</h5>
+            <h5><%=t(:my_uid_already_stored)%></h5>
             <%= form_tag(:action => "retrieve_uid") do %>
               <p>
-                <%= label_tag(:identifier, "Tvoj kód") %>
+                <%= label_tag(:identifier, t(:your_code)) %>
                 <%= text_field_tag(:identifier) %>
               </p>
               <p>
-                <%= label_tag(:leave_uid, "Nemaž môj kód, ešte si chcem nastaviť proxy na inom PC") %>
+                <%= label_tag(:leave_uid, t(:dont_remove)) %>
                 <%= check_box_tag :leave_uid, "1", false %>
               </p>
               <p>
-                <%= submit_tag 'Nastav mi môj identifikátor', :class => 'submit'%>
+                <%= submit_tag t(:set_me_my_uid), :class => 'submit'%>
               </p>
             <% end %>
 

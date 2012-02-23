@@ -50,11 +50,25 @@ sk:
   pending: "Čaká na spracovanie"
   solved: "Vyriešené"
 
+#move UID
+  
+  move_uid_heading: "Presun UID na iný počítač"
+  move_intro: "Pri nastavovaní proxy sme ti vygenerovali jedinečný UID kód, aby sme ťa vedeli identifokovať. Ak by si chcel používať proxy server aj na inom počítači, je pre nás dôležité, aby si všade používal rovnaké ID."
+  your_current_uid: "Tvoje aktuálne UID:"
+  you_can_save_this: "Aby si toto UID nemusel pamätať, môžeš si ho tu uložiť pod nejakým kódom a neskôr stiahnuť."
+  i_want_to_store_my_uid: "Chcem si uložiť svoje UID"
+  your_code_name_for_example: "Tvoj kód (napríklad tvoje meno)"
+  store: "Ulož"
+  my_uid_already_stored: "UID mám už uložené, chcem ho používať na tomto PC"
+  your_code: "Tvoj kód"
+  dont_remove: "Nemaž môj kód, ešte si chcem nastaviť proxy na inom PC"
+  set_me_my_uid: "Nastav mi môj identifikátor"
+
 #remove UID
 
-  remove_intro: Ak si už neželáte využívať služby server PeWe Proxy, kliknite na odkaz nižšie. Váš identifikátor bude z tohto počítača odstránený.
-  remove_warning: Táto akcia sa nedá vrátiť. Prídete o všetky výhody, ktoré Vám PeWe Proxy ponúka. Naozaj pokračovať?
-  remove_identifier_from_this_computer: Odstrániť identifikátor z tohto počítača
+  remove_intro: "Ak si už neželáte využívať služby server PeWe Proxy, kliknite na odkaz nižšie. Váš identifikátor bude z tohto počítača odstránený."
+  remove_warning: "Táto akcia sa nedá vrátiť. Prídete o všetky výhody, ktoré Vám PeWe Proxy ponúka. Naozaj pokračovať?"
+  remove_identifier_from_this_computer: "Odstrániť identifikátor z tohto počítača"
 
 #time
 

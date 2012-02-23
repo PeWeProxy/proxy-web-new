@@ -50,8 +50,22 @@ en:
   pending: "Pending"
   solved: "Solved"
   
+#move UID
+  
+  move_uid_heading: "Move UID to Another Computer"
+  move_intro: "During setup, we have generated an unique UID code for you, so we can identify you. If you want to use proxy on another computer, it's important for us that you use the same ID."
+  your_current_uid: "Your current UID:"
+  you_can_save_this: "You can save this UID under some code and download it later so you don't have to remember it."
+  i_want_to_store_my_uid: "I want to store my UID"
+  your_code_name_for_example: "Your code (name for example)"
+  store: "Store"
+  my_uid_already_stored: "My UID already stored, I want to use it on this computer"
+  your_code: "Your code"
+  dont_remove: "Don't remove my code, I will use it on another computer"
+  set_me_my_uid: "Set me my proxy identifier"
+
 #remove UID
 
-  remove_intro: If you don't want to use proxy anymore, click the link below. Your identifier will be removed from this computer.
-  remove_warning: This action cannot be undone. You will lost all the advantages of PeWe Proxy using. Do you want to continue?
-  remove_identifier_from_this_computer: Remove the identifier from your computer
+  remove_intro: "If you don't want to use proxy anymore, click the link below. Your identifier will be removed from this computer."
+  remove_warning: "This action cannot be undone. You will lost all the advantages of PeWe Proxy using. Do you want to continue?"
+  remove_identifier_from_this_computer: "Remove the identifier from your computer"
