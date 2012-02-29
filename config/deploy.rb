@@ -5,6 +5,7 @@ $:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Add RVM's lib directory
 require "rvm/capistrano"                  # Load RVM's capistrano plugin.
 
 set :rvm_ruby_string, '1.9.2@passenger'
+set :rvm_bin_path, "/usr/local/bin"
 set :rvm_type, :user
 
 set :application, "proxy"
