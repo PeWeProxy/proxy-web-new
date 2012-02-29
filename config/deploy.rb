@@ -2,9 +2,10 @@ require 'capistrano/ext/multistage'
 require 'bundler/capistrano'
 
 $:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Add RVM's lib directory to the load path.
-require "capistrano"                  # Load RVM's capistrano plugin.
+require "rvm/capistrano"                  # Load RVM's capistrano plugin.
 
 set :rvm_ruby_string, '1.9.2@passenger'
+set :rvm_type, :user
 
 set :application, "proxy"
 set :deploy_to, "/var/rails/#{application}"
