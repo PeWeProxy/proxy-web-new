@@ -44,5 +44,9 @@ module ProxyWeb
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # precompile js files
+    config.assets.precompile << '*.js'
+
   end
 end
