@@ -35,6 +35,16 @@ namespace :deploy do
     run "ln -nfs #{shared_path} #{release_path}/shared"
   end
 
+  task :cold do
+    update
+    load_schema
+    start
+  end
+
+  task :load_schema, :roles => :app do
+    run "cd #{current_path}; rake db:schema:load"
+  end
+
   task "restart", :roles => :app do
     passenger.restart
   end
