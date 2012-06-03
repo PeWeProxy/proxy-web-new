@@ -8,8 +8,8 @@ class LogsController < ApplicationController
 
     last_log = @logs.pop
 		if last_log
-			@next_page_startkey = last_log.timestamp
-			@next_page_startkey_docid = last_log.id
+			@next_page_startkey = last_log.id
+			@next_page_startkey_docid = last_log.timestamp
 		end
   end
 
