@@ -4,7 +4,7 @@ class LogsController < ApplicationController
   LOGS_PER_PAGE = 20
 
   def list
-    @logs = CouchPotato.database.view AccessLog.by_user_and_timestamp(:startkey => [@uid, params[:start]], :startkey_docid => params[:start_id], :limit => LOGS_PER_PAGE + 1)
+    @logs = CouchPotato.database.view AccessLog.by_user_and_timestamp(:startkey => [@uid, params[:start]], :endkey => [@uid, {}], :limit => LOGS_PER_PAGE + 1)
 
     last_log = @logs.pop
 		if last_log
