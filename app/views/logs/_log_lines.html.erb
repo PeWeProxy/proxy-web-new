@@ -2,7 +2,7 @@
   <tr>
     <td class="url">
       <% unless log.page.nil? %>
-        <a href="<%= log.page %>" title="<%= log.page %>"><%= truncate log.page, :length => 50 %></a>
+        <a href="<%= log.user_id %>" title="<%= log.page %>"><%= truncate log.page, :length => 50 %></a>
       <% else %>
         <%= t(:unknown) %>
       <% end %>
